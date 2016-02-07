@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11459cce-7333-4a7c-96dc-db8f170d2f7c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Differences" afterPath="$PROJECT_DIR$/src/Differences" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ErrorCheckerTests.java" afterPath="$PROJECT_DIR$/src/ErrorCheckerTests.java" />
     </list>
     <ignored path="cw-two.iws" />
@@ -95,8 +94,8 @@
       <file leaf-file-name="ErrorCheckerTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ErrorCheckerTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22113022">
-              <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+            <state vertical-scroll-proportion="2.063882">
+              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -888,14 +887,11 @@
       <option name="number" value="Default" />
       <updated>1454495869913</updated>
       <workItem from="1454495874446" duration="33781000" />
-      <workItem from="1454849953253" duration="18131000" />
+      <workItem from="1454849953253" duration="18271000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CodeGeneratorTests - 2016.02.07 at 14h 14m 21s.xml">
-      <configuration name="CodeGeneratorTests" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CodeGeneratorTests - 2016.02.07 at 14h 15m 02s.xml">
       <configuration name="CodeGeneratorTests" configurationId="JUnit" />
     </history-entry>
@@ -920,12 +916,15 @@
     <history-entry file="ErrorCheckerTests - 2016.02.07 at 20h 37m 02s.xml">
       <configuration name="ErrorCheckerTests" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ErrorCheckerTests - 2016.02.07 at 20h 39m 23s.xml">
+      <configuration name="ErrorCheckerTests" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="ErrorCheckerTests_testLength - 2016.02.07 at 20h 25m 13s.xml">
       <configuration name="ErrorCheckerTests.testLength" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51912000" />
+    <option name="totallyTimeSpent" value="52052000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="718" extended-state="6" />
@@ -1342,8 +1341,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ErrorCheckerTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22113022">
-          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        <state vertical-scroll-proportion="2.063882">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

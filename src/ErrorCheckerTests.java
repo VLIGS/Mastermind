@@ -47,5 +47,10 @@ public class ErrorCheckerTests {
         String guess = "YYYy";
         assertEquals(errorChecker.isValidGuess(guess, pegColours.getAllColours(), codeLength.getNumberOfPegs()),false);
     }
+    public void testMixedString()
+    {
+        String guess = "1Y@y";
+        assertEquals(errorChecker.isValidGuess(guess, pegColours.getAllColours(), codeLength.getNumberOfPegs()),false);
+    }
 
 }

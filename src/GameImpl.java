@@ -1,7 +1,9 @@
 import java.lang.reflect.Field;
 
 public class GameImpl extends GameAbstractImpl implements Game {
-    private String gameCode;
+    private Line code;
+    private PegColour myPegColours = new PegColourImpl("blue", "green", "orange", "purple", "red", "yellow");
+
     public GameImpl(boolean easy){
         super(easy);
     }
@@ -27,6 +29,7 @@ public class GameImpl extends GameAbstractImpl implements Game {
     @Override
     public void runGames(){
 
+        //code = CodeGenerator::getCode()
         //
         //get guess from user
         //check if valid guess

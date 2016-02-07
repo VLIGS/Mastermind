@@ -59,7 +59,7 @@ public class GameImpl extends GameAbstractImpl implements Game {
 
         do {
             String guess = "";
-            while (!errorChecker.isValidGuess(guess)) {
+            while (!errorChecker.isValidGuess(guess,pegColours.getAllColours(),numberOfPegs.getNumberOfPegs())) {
                 guess = display.getGuess(numberOfGuesses.getNumberOfGuesses());
             }
         } while (numberOfGuesses.getNumberOfGuesses()>0);

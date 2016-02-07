@@ -15,6 +15,6 @@ NumberOfPegs(ni)
 
 Display(ds)
     ds1: don't have setNumberOfGuessesAllowed, setShowCode, setCode
-    ds2: pass in PegColour, NumberOfPegs, NumberOfGuesses into displayInstructions
+    ds2: pass in PegColour pegColour, int NumberOfPegs, int NumberOfGuesses into displayInstructions
     ds3: changed displayInstructions to remove hardcoding of initial number of tries and number of pegs
     ds4: overloaded displayInstructions to just pass in simple string

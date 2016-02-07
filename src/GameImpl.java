@@ -13,6 +13,7 @@ public class GameImpl extends GameAbstractImpl implements Game {
     private List<Line> guesses;
     private List<Line> feedback;
     private Scrambler scrambler;
+    private ErrorChecker errorChecker;
     private boolean showCode;
 
     public GameImpl(boolean easy){
@@ -28,6 +29,7 @@ public class GameImpl extends GameAbstractImpl implements Game {
         codeGenerator = new CodeGeneratorImpl(); //Spring: need getInstance here
         analyser = new AnalyserImpl(); //Spring: need getInstance here
         scrambler = new ScramblerImpl(); //Spring: need getInstance here
+        errorChecker = new ErrorCheckerImpl();//Spring: need getInstance here
     }
 
     /**
@@ -51,11 +53,16 @@ public class GameImpl extends GameAbstractImpl implements Game {
     @Override
     public void runGames(){
 
-        display.displayInstructions(pegColours,numberOfPegs,numberOfGuesses);
+        display.displayInstructions(pegColours,numberOfPegs.getNumberOfPegs(),numberOfGuesses.getNumberOfGuesses());
         display.displayInstructions("Generating secret code ....");
         code = codeGenerator.getCode(pegColours, numberOfPegs);
-        String userGuess = display.getGuess(numberOfGuesses);
-        //check if valid guess
+
+        do {
+            String guess = "";
+            while (!errorChecker.isValidGuess(guess)) {
+                guess = display.getGuess(numberOfGuesses.getNumberOfGuesses());
+            }
+        } while (numberOfGuesses.getNumberOfGuesses()>0);
 
         //store guess
         //analyse guess

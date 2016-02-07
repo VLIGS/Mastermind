@@ -1,6 +1,6 @@
 
 public interface Display {
-    void displayInstructions(PegColour pegColour, NumberOfPegs numberOfPegs, NumberOfGuesses numberOfGuesses);
+    void displayInstructions(PegColour pegColour, int numberOfPegs, int numberOfGuesses);
     void displayInstructions(String instruction);
-    String getGuess(NumberOfGuesses numberOfGuesses);
+    String getGuess(int numberOfGuesses);
 }

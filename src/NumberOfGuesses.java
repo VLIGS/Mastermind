@@ -4,10 +4,10 @@ public class NumberOfGuesses {
     public NumberOfGuesses(int numberOfPegs){
         this.numberOfGuesses = numberOfPegs;
     }
-    public void setNumberOfPegs(int numberOfPegs){
+    public void setNumberOfGuesses(int numberOfPegs){
         this.numberOfGuesses = numberOfPegs;
     }
-    public int getNumberOfPegs(){
+    public int getNumberOfGuesses(){
         return numberOfGuesses;
     }
 }

@@ -4,13 +4,13 @@ public class DisplayImpl implements Display{
     private Scanner scan = new Scanner(System.in); //Spring
 
     @Override
-    public void displayInstructions(PegColour pegColour, NumberOfPegs numberOfPegs, NumberOfGuesses numberOfGuesses){
+    public void displayInstructions(PegColour pegColour, int numberOfPegs, int numberOfGuesses){
 
         System.out.println("Welcome to Mastermind.\n" +
                 "\n" +
                 "This is a text version of the classic board game Mastermind.\n" +
                 "The computer will think of a secret code.\n" +
-                "The code consists of " + numberOfPegs.getNumberOfPegs() + " colored pegs.\n" +
+                "The code consists of " + numberOfPegs + " colored pegs.\n" +
                 "The pegs may be one of " + pegColour.getLength() + " colors: " +
                 pegColour.getAllColours().toString() + " \n" +
                 "A color may appear more than once in the code.\n" +
@@ -23,7 +23,7 @@ public class DisplayImpl implements Display{
                 "Only the first letter of the color is displayed. B for Blue, R for Red, and so forth.\n" +
                 "When entering guesses you only need to enter the first character of the color as a capital letter.\n" +
                 "\n" +
-                "You have " + numberOfGuesses.getNumberOfPegs() + " tries to guess the answer or you lose the game.\n");
+                "You have " + numberOfGuesses + " tries to guess the answer or you lose the game.\n");
 
     }
 
@@ -33,9 +33,9 @@ public class DisplayImpl implements Display{
     }
 
     @Override
-    public String getGuess(NumberOfGuesses numberOfGuesses){
+    public String getGuess(int numberOfGuesses){
 
-        System.out.println("You have " + numberOfGuesses.getNumberOfPegs() + " guesses left" + "\n");
+        System.out.println("You have " + numberOfGuesses + " guesses left" + "\n");
 
         System.out.println("\n" + "What is your next guess?\n" +
                 "Type in the characters for your guess and press enter.\n" +

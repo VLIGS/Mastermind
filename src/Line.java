@@ -25,4 +25,5 @@ public interface Line {
      * @return
      */
     int numberOfPegs();
+
 }

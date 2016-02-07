@@ -8,3 +8,13 @@ Peg(pe)
 GameImpl(gi)
 
     gi1: Create PegColour instance to pass in, connected to cg1
+    gi2: Instantiate codeGenerator in constructor rather than in runGames //need to think whether codeGenerator might change during the game
+
+NumberOfPegs(ni)
+    ni1: instead of simple integer use class for the purposes of dependency injection
+
+Display(ds)
+    ds1: don't have setNumberOfGuessesAllowed, setShowCode, setCode
+    ds2: pass in PegColour, NumberOfPegs, NumberOfGuesses into displayInstructions
+    ds3: changed displayInstructions to remove hardcoding of initial number of tries and number of pegs
+    ds4: overloaded displayInstructions to just pass in simple string

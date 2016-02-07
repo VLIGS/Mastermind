@@ -10,14 +10,14 @@ import static org.junit.Assert.assertTrue;
 public class CodeGeneratorTests {
     PegColour pegColours;
     PegColour pegColoursOther;
-    int codeLength;
+    NumberOfPegs codeLength;
     CodeGenerator codeGenerator;
 
     @Before
     public final void setUp() {
         pegColours = new PegColourImpl("blue", "green", "orange", "purple", "red", "yellow");
         pegColoursOther = new PegColourImpl("apricot", "cobalt", "denim", "ecru", "flax", "indigo");
-        codeLength = 4;
+        codeLength = new NumberOfPegs(4);
         codeGenerator = new CodeGeneratorImpl();
     }
 
@@ -25,6 +25,7 @@ public class CodeGeneratorTests {
     public void testLength()
     {
         assertEquals(codeGenerator.getCode(pegColours,codeLength ).numberOfPegs(),4);
+
     }
 
     @Test

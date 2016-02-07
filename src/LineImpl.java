@@ -31,10 +31,10 @@ public class LineImpl implements Line{
     }
     @Override
     public String toString(){
-        StringBuilder sb = new StringBuilder();
-        for (Peg p: line){
-            sb.append(p.getPegColour());
-        }
-        return sb.toString();
+            StringBuilder sb = new StringBuilder();
+            for (Peg p : line) {
+                sb.append(p.getPegColour());
+            }
+            return sb.toString();
     }
 }

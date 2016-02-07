@@ -1,0 +1,2 @@
+Code Generator:
+    getCode(PegColour, int) vs getCode(int) //better decoupling if pass in PegColour as parameter

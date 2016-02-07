@@ -18,6 +18,12 @@ public class ErrorCheckerTests {
     }
 
     @Test
+    public void testForNull()
+    {
+        String guess = null;
+        assertEquals(errorChecker.isValidGuess(guess, pegColours.getAllColours(), codeLength.getNumberOfPegs()),false);
+    }
+    @Test
     public void testLength()
     {
         String guess = "YYY";

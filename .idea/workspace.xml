@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11459cce-7333-4a7c-96dc-db8f170d2f7c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ErrorChecker.java" afterPath="$PROJECT_DIR$/src/ErrorChecker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ErrorCheckerImpl.java" afterPath="$PROJECT_DIR$/src/ErrorCheckerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameImpl.java" afterPath="$PROJECT_DIR$/src/GameImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Differences" afterPath="$PROJECT_DIR$/src/Differences" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ErrorCheckerTests.java" afterPath="$PROJECT_DIR$/src/ErrorCheckerTests.java" />
     </list>
     <ignored path="cw-two.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/src/Differences">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+              <caret line="22" column="132" selection-start-line="22" selection-start-column="132" selection-end-line="22" selection-end-column="132" />
               <folding />
             </state>
           </provider>
@@ -96,8 +95,8 @@
       <file leaf-file-name="ErrorCheckerTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ErrorCheckerTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.4373465">
-              <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.22113022">
+              <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -187,10 +186,10 @@
         <option value="$PROJECT_DIR$/src/NumberOfGuesses.java" />
         <option value="$PROJECT_DIR$/src/DisplayImpl.java" />
         <option value="$PROJECT_DIR$/src/Display.java" />
-        <option value="$PROJECT_DIR$/src/Differences" />
         <option value="$PROJECT_DIR$/src/ErrorChecker.java" />
         <option value="$PROJECT_DIR$/src/ErrorCheckerImpl.java" />
         <option value="$PROJECT_DIR$/src/GameImpl.java" />
+        <option value="$PROJECT_DIR$/src/Differences" />
         <option value="$PROJECT_DIR$/src/ErrorCheckerTests.java" />
       </list>
     </option>
@@ -889,14 +888,11 @@
       <option name="number" value="Default" />
       <updated>1454495869913</updated>
       <workItem from="1454495874446" duration="33781000" />
-      <workItem from="1454849953253" duration="17705000" />
+      <workItem from="1454849953253" duration="18131000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CodeGeneratorTests - 2016.02.07 at 14h 12m 04s.xml">
-      <configuration name="CodeGeneratorTests" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CodeGeneratorTests - 2016.02.07 at 14h 14m 21s.xml">
       <configuration name="CodeGeneratorTests" configurationId="JUnit" />
     </history-entry>
@@ -921,12 +917,15 @@
     <history-entry file="ErrorCheckerTests - 2016.02.07 at 20h 29m 38s.xml">
       <configuration name="ErrorCheckerTests" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ErrorCheckerTests - 2016.02.07 at 20h 37m 02s.xml">
+      <configuration name="ErrorCheckerTests" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="ErrorCheckerTests_testLength - 2016.02.07 at 20h 25m 13s.xml">
       <configuration name="ErrorCheckerTests.testLength" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51486000" />
+    <option name="totallyTimeSpent" value="51912000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="718" extended-state="6" />
@@ -1287,14 +1286,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Differences">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1303,10 +1294,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ErrorCheckerImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/CodeGeneratorTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+          <caret line="40" column="40" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="109" selection-start-line="61" selection-start-column="109" selection-end-line="61" selection-end-column="109" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1321,20 +1322,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/Differences">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="109" selection-start-line="61" selection-start-column="109" selection-end-line="61" selection-end-column="109" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="22" column="132" selection-start-line="22" selection-start-column="132" selection-end-line="22" selection-end-column="132" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeGeneratorTests.java">
+    <entry file="file://$PROJECT_DIR$/src/ErrorCheckerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="40" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="40" />
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1343,8 +1342,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ErrorCheckerTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4373465">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.22113022">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

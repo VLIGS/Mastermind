@@ -33,7 +33,12 @@ public class AnalyserImpl implements Analyser{
     }
     @Override
     public boolean checkIfWon(Line line){
-        Line winningFeedback = new LineImpl(new PegImpl(Feedback.getExactMatch()), new PegImpl(Feedback.getExactMatch()), new PegImpl(Feedback.getExactMatch()), new PegImpl(Feedback.getExactMatch()));
+        Line winningFeedback = new LineImpl(); //Spring
+
+        for(int i = 0; i<line.numberOfPegs(); i++){
+            winningFeedback.addPeg(new PegImpl(Feedback.getExactMatch())); //Spring
+        }
+
         if(line.toString().equals(winningFeedback.toString())){
             return true;
         }

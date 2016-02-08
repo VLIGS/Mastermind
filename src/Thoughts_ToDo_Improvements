@@ -1,0 +1,2 @@
+* Display uses System.out.println to communicate with user, but may need to use different mode of communication
+* Adapt tests to different length of code

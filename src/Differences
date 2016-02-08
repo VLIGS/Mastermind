@@ -28,6 +28,7 @@ ErrorChecker(ec)
 Analyser(an)
     an1: shifted stringToLine to Line, just seems that it should sit there as it is nothing to do with analyser
     an2: passing in code into analyseGuess, both code and guess are Line rather than List
+    an3: different implementation of ifWon method, compare feedback string to
 
 Line(ln)
     ln1: added stringToLine, related to an1, made it static // note this implementation just has letter for colour, not full string

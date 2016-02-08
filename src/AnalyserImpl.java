@@ -4,38 +4,30 @@ public class AnalyserImpl implements Analyser{
         int numberOfBlacks = 0;
         int numberOfWhites = 0;
 
-        Line unscrambledPegResult = new LineImpl(); //Spring
-        /**
+        Line unscrambledResult = new LineImpl(); //Spring
         for(int i = 0; i < guess.numberOfPegs(); i ++){
-            String pegColourCode = code.getPeg(i).getPegColour();
+            String pegColour = code.getPeg(i).getPegColour();
             for(int j = 0; j < guess.numberOfPegs(); j++){
-                if(pegColourCode.equals(guess.getPeg(j).getPegColour())){
+                if(pegColour.equals(guess.getPeg(j).getPegColour())){
                     if (i == j){
-
-                        //unscrambledPegResult.addPeg(new PegFB("BLACK"));
-                        unscrambledResult.add(FeedbackColours.EXACTMATCH);
-                        System.out.println(FeedbackColours.getNameFor(FeedbackColours.EXACTMATCH));
-                        //unscrambledPegResult.addPeg(new Peg("B"));
+                        unscrambledResult.addPeg(new PegImpl(Feedback.getExactMatch())); //Spring
+                        //System.out.println(FeedbackColours.getNameFor(FeedbackColours.EXACTMATCH));
                         numberOfBlacks++;
                     } else {
-                        // unscrambledPegResult.addPeg(new PegFB("WHITE"));
-                        // unscrambledPegResult.addPeg(new Peg("W"));
-                        unscrambledResult.add(FeedbackColours.MATCH);
-                        System.out.println(FeedbackColours.getNameFor(FeedbackColours.MATCH));
+                        unscrambledResult.addPeg(new PegImpl(Feedback.getSymbolMatch())); //Spring
+                        //System.out.println(FeedbackColours.getNameFor(FeedbackColours.MATCH));
                         numberOfWhites++;
                     }
                 }
             }
         }
-        if(numberOfBlacks == code.numberOfPegs()){
-            win = true;
-        }
+        //if(numberOfBlacks == code.numberOfPegs()){
+            //win = true;
+        //}
         if(numberOfBlacks == 0 && numberOfWhites == 0){
-            unscrambledResult.add(FeedbackColours.NOMATCH);
+            unscrambledResult.addPeg(new PegImpl(Feedback.getNoMatch()));
         }
         return unscrambledResult;
- **/
-        return unscrambledPegResult;
     }
     @Override
     public Line getScrambledPegResult(){

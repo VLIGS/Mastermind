@@ -7,7 +7,7 @@ public class CodeGeneratorImpl implements CodeGenerator{
         Line code = new LineImpl(); //Spring: need getInstance here
         for(int i = 0; i<numberOfPegs.getNumberOfPegs(); i++){
             int c = generator.generateRandomNumber(pegColours.getLength());
-            code.addPeg(new PegImpl(pegColours.getColour(c))); //Spring: need getInstance here
+            code.addPeg(new PegImpl(pegColours.getColour(c).substring(0,1).toUpperCase())); //Spring: need getInstance here
         }
         return code;
     }

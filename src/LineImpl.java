@@ -37,6 +37,7 @@ public class LineImpl implements Line{
         return line;
     }
      **/
+
     @Override
     public String toString(){
             StringBuilder sb = new StringBuilder();

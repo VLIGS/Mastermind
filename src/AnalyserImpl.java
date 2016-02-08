@@ -21,9 +21,7 @@ public class AnalyserImpl implements Analyser{
                 }
             }
         }
-        //if(numberOfBlacks == code.numberOfPegs()){
-            //win = true;
-        //}
+
         if(numberOfBlacks == 0 && numberOfWhites == 0){
             unscrambledResult.addPeg(new PegImpl(Feedback.getNoMatch()));
         }
@@ -34,7 +32,11 @@ public class AnalyserImpl implements Analyser{
         return null;
     }
     @Override
-    public boolean checkIfWon(){
-        return true;
+    public boolean checkIfWon(Line line){
+        Line winningFeedback = new LineImpl(new PegImpl(Feedback.getExactMatch()), new PegImpl(Feedback.getExactMatch()), new PegImpl(Feedback.getExactMatch()), new PegImpl(Feedback.getExactMatch()));
+        if(line.toString().equals(winningFeedback.toString())){
+            return true;
+        }
+        return false;
     }
 }

@@ -69,9 +69,6 @@ public class GameImpl extends GameAbstractImpl implements Game {
             display.displayInstructions("The secret code is " + code.toString(), showCode);
             display.displayResults(guesses, feedback, numberOfGuesses.getNumberOfGuesses());
 
-
-
-
             remainingNumberOfGuesses--;
 
         } while (remainingNumberOfGuesses>0);

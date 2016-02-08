@@ -15,7 +15,7 @@ public class AnalyserTests {
     }
 
     @Test
-    public void testAllMatchingPegsAllMatchingPosition() {
+    public void test_analyseGuess_with_AllMatchingPegsAllMatchingPosition() {
         guess = new LineImpl(new PegImpl(code.getPeg(0).getPegColour()), new PegImpl(code.getPeg(1).getPegColour()), new PegImpl(code.getPeg(2).getPegColour()), new PegImpl(code.getPeg(3).getPegColour()));
         Line expected = new LineImpl(new PegImpl(Feedback.getExactMatch()), new PegImpl(Feedback.getExactMatch()), new PegImpl(Feedback.getExactMatch()), new PegImpl(Feedback.getExactMatch()));
         Line actual = analyser.analyseGuess(guess, code);
@@ -23,7 +23,7 @@ public class AnalyserTests {
     }
 
     @Test
-    public void testAllMatchingPegsNotMatchingPosition () {
+    public void test_analyseGuess_with_AllMatchingPegsNotMatchingPosition () {
         guess = new LineImpl(new PegImpl(code.getPeg(3).getPegColour()),new PegImpl(code.getPeg(2).getPegColour()), new PegImpl(code.getPeg(1).getPegColour()), new PegImpl(code.getPeg(0).getPegColour()));
         Line expected = new LineImpl(new PegImpl(Feedback.getSymbolMatch()),new PegImpl(Feedback.getSymbolMatch()), new PegImpl(Feedback.getSymbolMatch()), new PegImpl(Feedback.getSymbolMatch()));
         Line actual = analyser.analyseGuess(guess,code);
@@ -31,7 +31,7 @@ public class AnalyserTests {
     }
 
     @Test
-    public void testAllMatchingPegsSecondMatchingPosition () {
+    public void test_analyseGuess_with_AllMatchingPegsSecondMatchingPosition () {
         guess = new LineImpl(new PegImpl(code.getPeg(3).getPegColour()),new PegImpl(code.getPeg(1).getPegColour()), new PegImpl(code.getPeg(0).getPegColour()), new PegImpl(code.getPeg(2).getPegColour()));
         Line expected = new LineImpl(new PegImpl(Feedback.getSymbolMatch()),new PegImpl(Feedback.getExactMatch()), new PegImpl(Feedback.getSymbolMatch()), new PegImpl(Feedback.getSymbolMatch()));
         Line actual = analyser.analyseGuess(guess,code);
@@ -39,11 +39,23 @@ public class AnalyserTests {
     }
 
     @Test
-    public void testNoMatchingPegs () {
+    public void test_analyseGuess_with_NoMatchingPegs () {
         guess = new LineImpl(new PegImpl("P"),new PegImpl("P"), new PegImpl("P"), new PegImpl("P"));
         Line expected = new LineImpl(new PegImpl(Feedback.getNoMatch()));
         Line actual = analyser.analyseGuess(guess,code);
         assertEquals(expected.toString(),actual.toString());
+    }
+
+    @Test
+    public void test_IfWon_with_NoMatchingPegs () {
+        guess = new LineImpl(new PegImpl("P"),new PegImpl("P"), new PegImpl("P"), new PegImpl("P"));
+        assertEquals(false, analyser.checkIfWon(analyser.analyseGuess(guess,code)));
+    }
+
+    @Test
+    public void test_IfWon_with_AllMatchingPegsAllMatchingPosition () {
+        guess = new LineImpl(new PegImpl(code.getPeg(0).getPegColour()), new PegImpl(code.getPeg(1).getPegColour()), new PegImpl(code.getPeg(2).getPegColour()), new PegImpl(code.getPeg(3).getPegColour()));
+        assertEquals(true, analyser.checkIfWon(analyser.analyseGuess(guess,code)));
     }
 
 }

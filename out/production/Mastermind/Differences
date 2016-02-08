@@ -18,6 +18,15 @@ Display(ds)
     ds2: pass in PegColour pegColour, int NumberOfPegs, int NumberOfGuesses into displayInstructions
     ds3: changed displayInstructions to remove hardcoding of initial number of tries and number of pegs
     ds4: overloaded displayInstructions to just pass in simple string
+    ds5: don't have guess again, maybe introduce this improvement later
 
 ErrorChecker(ec)
     er1: implemented isValidGuess by passing in all the necessary parameters for checking rather than relying on internal parameters
+
+Analyser(an)
+    an1: shifted stringToLine to Line, just seems that it should sit there as it is nothing to do with analyser
+    an2: passing in code into analyseGuess, both code and guess are Line rather than List
+
+Line(ln)
+    ln1: added stringToLine, related to an1, made it static // note this implementation just has letter for colour, not full string
+                                            // also different as it has PegImp, rather than Peg, related to pe1

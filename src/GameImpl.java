@@ -56,13 +56,20 @@ public class GameImpl extends GameAbstractImpl implements Game {
         display.displayInstructions(pegColours,numberOfPegs.getNumberOfPegs(),numberOfGuesses.getNumberOfGuesses());
         display.displayInstructions("Generating secret code ....");
         code = codeGenerator.getCode(pegColours, numberOfPegs);
+        int remainingNumberOfGuesses = numberOfGuesses.getNumberOfGuesses();
 
         do {
             String guess = "";
             while (!errorChecker.isValidGuess(guess,pegColours.getAllColours(),numberOfPegs.getNumberOfPegs())) {
-                guess = display.getGuess(numberOfGuesses.getNumberOfGuesses());
+                guess = display.getGuess(remainingNumberOfGuesses);
             }
-        } while (numberOfGuesses.getNumberOfGuesses()>0);
+            guesses.add(Line.stringToLine(guess));
+
+
+
+
+
+        } while (remainingNumberOfGuesses>0);
 
         //store guess
         //analyse guess

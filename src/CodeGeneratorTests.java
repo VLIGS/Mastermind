@@ -24,7 +24,7 @@ public class CodeGeneratorTests {
     @Test
     public void testLength()
     {
-        assertEquals(codeGenerator.getCode(pegColours,codeLength ).numberOfPegs(),4);
+        assertEquals(codeGenerator.getCode(pegColours,codeLength).numberOfPegs(),4);
 
     }
 

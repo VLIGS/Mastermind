@@ -2,11 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LineImpl implements Line{
-    /**
-     * Spring
-     */
-    //List<Peg> line = new ArrayList<>(); //does not work without specifying type inside <>
-    private List<Peg> line = new ArrayList<Peg>(); //Spring
+    private List<Peg> line = new ArrayList<>(); //Spring
 
     public LineImpl (Peg ... pegs){
         for (Peg p: pegs){
@@ -29,6 +25,18 @@ public class LineImpl implements Line{
     public int numberOfPegs(){
         return line.size();
     }
+    /**
+    @Override
+    public Line stringToLine(String s){
+
+        Line line = new LineImpl(); //Spring
+
+        for(int i = 0; i < s.length(); i ++){
+            line.addPeg(new PegImpl(s.substring(i,i+1))); //Spring
+        }
+        return line;
+    }
+     **/
     @Override
     public String toString(){
             StringBuilder sb = new StringBuilder();
@@ -37,4 +45,5 @@ public class LineImpl implements Line{
             }
             return sb.toString();
     }
+
 }

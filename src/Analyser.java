@@ -1,15 +1,9 @@
 public interface Analyser {
     /**
-     *
-     * @param code
-     */
-    //void setCode(Line code);
-
-    /**
      * called to check user guess versus code
      * @param guess
      */
-    Line analyseGuess(Line guess);
+    Line analyseGuess(Line guess, Line code);
 
     /**
      *
@@ -17,12 +11,6 @@ public interface Analyser {
      */
     Line getScrambledPegResult();
 
-    /**
-     *
-     * @param s
-     * @return
-     */
-    Line stringToLine(String s);
 
     /**
      *

@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class DisplayImpl implements Display{
@@ -31,17 +32,36 @@ public class DisplayImpl implements Display{
     public void displayInstructions(String instruction){
         System.out.println(instruction);
     }
+    @Override
+    public void displayInstructions(String instruction, boolean showCode){
+        if(showCode){
+            System.out.println(instruction);
+        }
+    }
 
     @Override
     public String getGuess(int numberOfGuesses){
 
-        System.out.println("You have " + numberOfGuesses + " guesses left" + "\n");
+        System.out.println("\n" + "You have " + numberOfGuesses + " guesses left" + "\n");
 
         System.out.println("\n" + "What is your next guess?\n" +
                 "Type in the characters for your guess and press enter.\n" +
                 "Enter guess:");
 
         return retrieveInput();
+    }
+
+    @Override
+    public void displayResults(List guesses, List results, int NumberOfGuessesAllowed){
+
+            System.out.println(".... Secret Code");
+            int j;
+            for (j = 0; j < guesses.size(); j++) {
+                System.out.println(guesses.get(j).toString() + " Result: " + results.get(j).toString());
+            }
+            for (int i = j; i < NumberOfGuessesAllowed; i++){
+                System.out.println("....");
+            }
     }
 
     private String retrieveInput(){

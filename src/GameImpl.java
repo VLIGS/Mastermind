@@ -56,6 +56,7 @@ public class GameImpl extends GameAbstractImpl implements Game {
         display.displayInstructions(pegColours,numberOfPegs.getNumberOfPegs(),numberOfGuesses.getNumberOfGuesses());
         display.displayInstructions("Generating secret code ....");
         code = codeGenerator.getCode(pegColours, numberOfPegs);
+        display.displayInstructions("The secret code is " + code.toString(), showCode);
         int remainingNumberOfGuesses = numberOfGuesses.getNumberOfGuesses();
 
         do {
@@ -64,17 +65,17 @@ public class GameImpl extends GameAbstractImpl implements Game {
                 guess = display.getGuess(remainingNumberOfGuesses);
             }
             guesses.add(Line.stringToLine(guess));
+            feedback.add(scrambler.scramble(analyser.analyseGuess(guesses.get(numberOfGuesses.getNumberOfGuesses()-remainingNumberOfGuesses),code)));
+            display.displayInstructions("The secret code is " + code.toString(), showCode);
+            display.displayResults(guesses, feedback, numberOfGuesses.getNumberOfGuesses());
 
 
 
 
+            remainingNumberOfGuesses--;
 
         } while (remainingNumberOfGuesses>0);
-
-        //store guess
-        //analyse guess
-        //scramble
-
+        
 
     }
 }

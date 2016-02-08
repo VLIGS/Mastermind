@@ -25,6 +25,9 @@ public class LineImpl implements Line{
     public int numberOfPegs(){
         return line.size();
     }
+    public void setPeg(int index, String s){
+        line.set(index, new PegImpl(s));
+    }
     /**
     @Override
     public Line stringToLine(String s){

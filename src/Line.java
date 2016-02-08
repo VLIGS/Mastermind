@@ -29,6 +29,12 @@ public interface Line {
     /**
      *
      * @param s
+     */
+    void setPeg(int n, String s);
+
+    /**
+     *
+     * @param s
      * @return
      */
     static Line stringToLine(String s){

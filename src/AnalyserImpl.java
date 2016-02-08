@@ -4,7 +4,26 @@ public class AnalyserImpl implements Analyser{
         int numberOfBlacks = 0;
         int numberOfWhites = 0;
 
-        Line unscrambledResult = new LineImpl(); //Spring
+        Line unscrambledResult;
+        unscrambledResult= new LineImpl(); //Spring
+
+        for(int i = 0; i < guess.numberOfPegs(); i ++){
+            String pegColour = code.getPeg(i).getPegColour();
+            for(int j = 0; j < guess.numberOfPegs(); j++){
+                if(pegColour.equals(guess.getPeg(j).getPegColour())){
+                    if (i == j){
+                        unscrambledResult.addPeg(new PegImpl(Feedback.getExactMatch())); //Spring
+                        numberOfBlacks++;
+                    } else {
+                        unscrambledResult.addPeg(new PegImpl(Feedback.getSymbolMatch())); //Spring
+                        numberOfWhites++;
+                    }
+                }
+            }
+        }
+
+        /**
+
         for(int i = 0; i < guess.numberOfPegs(); i ++){
             String pegColour = code.getPeg(i).getPegColour();
             for(int j = 0; j < guess.numberOfPegs(); j++){
@@ -21,16 +40,21 @@ public class AnalyserImpl implements Analyser{
                 }
             }
         }
+         **/
+
 
         if(numberOfBlacks == 0 && numberOfWhites == 0){
             unscrambledResult.addPeg(new PegImpl(Feedback.getNoMatch()));
         }
         return unscrambledResult;
     }
+
+    /**
     @Override
     public Line getScrambledPegResult(){
         return null;
     }
+     **/
     @Override
     public boolean checkIfWon(Line line){
         Line winningFeedback = new LineImpl(); //Spring

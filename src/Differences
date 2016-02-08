@@ -29,7 +29,9 @@ Analyser(an)
     an1: shifted stringToLine to Line, just seems that it should sit there as it is nothing to do with analyser
     an2: passing in code into analyseGuess, both code and guess are Line rather than List
     an3: different implementation of ifWon method, compare feedback line to line with all matching result
+    an4: don't have getScrambledPegResult
 
 Line(ln)
     ln1: added stringToLine, related to an1, made it static // note this implementation just has letter for colour, not full string
                                                             // also different as it has PegImp, rather than Peg, related to pe1
+   

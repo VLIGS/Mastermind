@@ -1,0 +1,362 @@
+Welcome to Mastermind.
+
+This is a text version of the classic board game Mastermind.
+The computer will think of a secret code.
+The code consists of 4 colored pegs.
+The pegs may be one of 6 colors: [blue, green, orange, purple, red, yellow]
+A color may appear more than once in the code.
+
+You try to guess what colored pegs are in the code and what order they are in
+After making a guess the result will be displayed.
+A result consists of a black peg for each peg you have exactly correct (color and position) in your guess.
+For each peg in the guess that is the correct color, but is out of position, you get a white peg.
+
+Only the first letter of the color is displayed. B for Blue, R for Red, and so forth.
+When entering guesses you only need to enter the first character of the color as a capital letter.
+
+You have 12 tries to guess the answer or you lose the game.
+
+
+Generating secret code ....
+
+The secret code is BBRP
+
+You have 12 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+PBRO
+
+The secret code is BBRP
+
+.... Secret Code
+PBRO Result: BlackBlackWhiteWhite
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+
+You have 11 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+BBRY
+
+The secret code is BBRP
+
+.... Secret Code
+PBRO Result: BlackBlackWhiteWhite
+BBRY Result: BlackBlackBlackWhiteWhite
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+
+You have 10 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+kkkky
+
+You have 10 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+PBYO
+
+The secret code is BBRP
+
+.... Secret Code
+PBRO Result: BlackBlackWhiteWhite
+BBRY Result: BlackBlackBlackWhiteWhite
+PBYO Result: WhiteBlackWhite
+....
+....
+....
+....
+....
+....
+....
+....
+....
+
+You have 9 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+YBRO
+
+The secret code is BBRP
+
+.... Secret Code
+PBRO Result: BlackBlackWhiteWhite
+BBRY Result: BlackBlackBlackWhiteWhite
+PBYO Result: WhiteBlackWhite
+YBRO Result: BlackWhiteBlack
+....
+....
+....
+....
+....
+....
+....
+....
+
+You have 8 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+PROO
+
+The secret code is BBRP
+
+.... Secret Code
+PBRO Result: BlackBlackWhiteWhite
+BBRY Result: BlackBlackBlackWhiteWhite
+PBYO Result: WhiteBlackWhite
+YBRO Result: BlackWhiteBlack
+PROO Result: WhiteWhite
+....
+....
+....
+....
+....
+....
+....
+
+You have 7 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+PBBO
+
+The secret code is BBRP
+
+.... Secret Code
+PBRO Result: BlackBlackWhiteWhite
+BBRY Result: BlackBlackBlackWhiteWhite
+PBYO Result: WhiteBlackWhite
+YBRO Result: BlackWhiteBlack
+PROO Result: WhiteWhite
+PBBO Result: WhiteWhiteBlackWhiteWhite
+....
+....
+....
+....
+....
+....
+
+You have 6 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+PBRP
+
+The secret code is BBRP
+
+.... Secret Code
+PBRO Result: BlackBlackWhiteWhite
+BBRY Result: BlackBlackBlackWhiteWhite
+PBYO Result: WhiteBlackWhite
+YBRO Result: BlackWhiteBlack
+PROO Result: WhiteWhite
+PBBO Result: WhiteWhiteBlackWhiteWhite
+PBRP Result: WhiteBlackBlackWhiteBlack
+....
+....
+....
+....
+....
+
+You have 5 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+PYRO
+
+The secret code is BBRP
+
+.... Secret Code
+PBRO Result: BlackBlackWhiteWhite
+BBRY Result: BlackBlackBlackWhiteWhite
+PBYO Result: WhiteBlackWhite
+YBRO Result: BlackWhiteBlack
+PROO Result: WhiteWhite
+PBBO Result: WhiteWhiteBlackWhiteWhite
+PBRP Result: WhiteBlackBlackWhiteBlack
+PYRO Result: WhiteBlack
+....
+....
+....
+....
+
+You have 4 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+PBYO
+
+The secret code is BBRP
+
+.... Secret Code
+PBRO Result: BlackBlackWhiteWhite
+BBRY Result: BlackBlackBlackWhiteWhite
+PBYO Result: WhiteBlackWhite
+YBRO Result: BlackWhiteBlack
+PROO Result: WhiteWhite
+PBBO Result: WhiteWhiteBlackWhiteWhite
+PBRP Result: WhiteBlackBlackWhiteBlack
+PYRO Result: WhiteBlack
+PBYO Result: WhiteBlackWhite
+....
+....
+....
+
+You have 3 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+PRRO
+
+The secret code is BBRP
+
+.... Secret Code
+PBRO Result: BlackBlackWhiteWhite
+BBRY Result: BlackBlackBlackWhiteWhite
+PBYO Result: WhiteBlackWhite
+YBRO Result: BlackWhiteBlack
+PROO Result: WhiteWhite
+PBBO Result: WhiteWhiteBlackWhiteWhite
+PBRP Result: WhiteBlackBlackWhiteBlack
+PYRO Result: WhiteBlack
+PBYO Result: WhiteBlackWhite
+PRRO Result: BlackWhiteWhite
+....
+....
+
+You have 2 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+PBBY
+
+The secret code is BBRP
+
+.... Secret Code
+PBRO Result: BlackBlackWhiteWhite
+BBRY Result: BlackBlackBlackWhiteWhite
+PBYO Result: WhiteBlackWhite
+YBRO Result: BlackWhiteBlack
+PROO Result: WhiteWhite
+PBBO Result: WhiteWhiteBlackWhiteWhite
+PBRP Result: WhiteBlackBlackWhiteBlack
+PYRO Result: WhiteBlack
+PBYO Result: WhiteBlackWhite
+PRRO Result: BlackWhiteWhite
+PBBY Result: WhiteWhiteWhiteWhiteBlack
+....
+
+You have 1 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+PYYO
+
+The secret code is BBRP
+You have used up all your turns unfortunately
+
+Enter Y for another game or anything else to quit:
+Y
+Welcome to Mastermind.
+
+This is a text version of the classic board game Mastermind.
+The computer will think of a secret code.
+The code consists of 4 colored pegs.
+The pegs may be one of 6 colors: [blue, green, orange, purple, red, yellow]
+A color may appear more than once in the code.
+
+You try to guess what colored pegs are in the code and what order they are in
+After making a guess the result will be displayed.
+A result consists of a black peg for each peg you have exactly correct (color and position) in your guess.
+For each peg in the guess that is the correct color, but is out of position, you get a white peg.
+
+Only the first letter of the color is displayed. B for Blue, R for Red, and so forth.
+When entering guesses you only need to enter the first character of the color as a capital letter.
+
+You have 12 tries to guess the answer or you lose the game.
+
+
+Generating secret code ....
+
+The secret code is GGRP
+
+You have 12 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+GYRP
+
+The secret code is GGRP
+
+.... Secret Code
+PBRO Result: BlackBlackWhiteWhite
+BBRY Result: BlackBlackBlackWhiteWhite
+PBYO Result: WhiteBlackWhite
+YBRO Result: BlackWhiteBlack
+PROO Result: WhiteWhite
+PBBO Result: WhiteWhiteBlackWhiteWhite
+PBRP Result: WhiteBlackBlackWhiteBlack
+PYRO Result: WhiteBlack
+PBYO Result: WhiteBlackWhite
+PRRO Result: BlackWhiteWhite
+PBBY Result: WhiteWhiteWhiteWhiteBlack
+PYYO Result: White
+GYRP Result: WhiteBlack
+
+You have 11 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:

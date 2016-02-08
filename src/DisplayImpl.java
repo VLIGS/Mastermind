@@ -30,12 +30,12 @@ public class DisplayImpl implements Display{
 
     @Override
     public void displayInstructions(String instruction){
-        System.out.println(instruction);
+        System.out.println("\n" + instruction);
     }
     @Override
     public void displayInstructions(String instruction, boolean showCode){
         if(showCode){
-            System.out.println(instruction);
+            System.out.println("\n" + instruction);
         }
     }
 
@@ -53,8 +53,7 @@ public class DisplayImpl implements Display{
 
     @Override
     public void displayResults(List guesses, List results, int NumberOfGuessesAllowed){
-
-            System.out.println(".... Secret Code");
+            System.out.println("\n" + ".... Secret Code");
             int j;
             for (j = 0; j < guesses.size(); j++) {
                 System.out.println(guesses.get(j).toString() + " Result: " + results.get(j).toString());
@@ -62,6 +61,23 @@ public class DisplayImpl implements Display{
             for (int i = j; i < NumberOfGuessesAllowed; i++){
                 System.out.println("....");
             }
+    }
+    @Override
+    public void displayWin(List guesses, List results){
+        System.out.println(guesses.get(guesses.size()-1).toString());
+        for (int j = 0; j < guesses.size(); j++) {
+            System.out.println(guesses.get(j).toString() + " Result: " + results.get(j).toString());
+        }
+        System.out.println("You solved the puzzle! Good job.\n");
+    }
+    @Override
+   public void displayLoss(){
+        System.out.println("You have used up all your turns unfortunately\n");
+    }
+    @Override
+    public String getUserChoice(){
+        System.out.println("Enter Y for another game or anything else to quit: ");
+        return retrieveInput();
     }
 
     private String retrieveInput(){

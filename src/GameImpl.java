@@ -15,6 +15,7 @@ public class GameImpl extends GameAbstractImpl implements Game {
     private Scrambler scrambler;
     private ErrorChecker errorChecker;
     private boolean showCode;
+    private String playAgain;
 
     public GameImpl(boolean easy){
         super(easy);
@@ -53,28 +54,38 @@ public class GameImpl extends GameAbstractImpl implements Game {
     @Override
     public void runGames(){
 
+        do {
         display.displayInstructions(pegColours,numberOfPegs.getNumberOfPegs(),numberOfGuesses.getNumberOfGuesses());
         display.displayInstructions("Generating secret code ....");
         code = codeGenerator.getCode(pegColours, numberOfPegs);
         display.displayInstructions("The secret code is " + code.toString(), showCode);
         int remainingNumberOfGuesses = numberOfGuesses.getNumberOfGuesses();
+            do {
+                String guess = "";
+                while (!errorChecker.isValidGuess(guess,pegColours.getAllColours(),numberOfPegs.getNumberOfPegs())) {
+                    guess = display.getGuess(remainingNumberOfGuesses);
+                }
+                guesses.add(Line.stringToLine(guess));
+                feedback.add(scrambler.scramble(analyser.analyseGuess(guesses.get(numberOfGuesses.getNumberOfGuesses()-remainingNumberOfGuesses),code)));
+                display.displayInstructions("The secret code is " + code.toString(), showCode);
 
-        do {
-            String guess = "";
-            while (!errorChecker.isValidGuess(guess,pegColours.getAllColours(),numberOfPegs.getNumberOfPegs())) {
-                guess = display.getGuess(remainingNumberOfGuesses);
-            }
-            guesses.add(Line.stringToLine(guess));
-            feedback.add(scrambler.scramble(analyser.analyseGuess(guesses.get(numberOfGuesses.getNumberOfGuesses()-remainingNumberOfGuesses),code)));
-            display.displayInstructions("The secret code is " + code.toString(), showCode);
-            display.displayResults(guesses, feedback, numberOfGuesses.getNumberOfGuesses());
+                if(analyser.checkIfWon(feedback.get(numberOfGuesses.getNumberOfGuesses()-remainingNumberOfGuesses))){
+                    display.displayWin(guesses, feedback);
+                    remainingNumberOfGuesses = 0;
+                }
+                else if(remainingNumberOfGuesses>1) {
+                    display.displayResults(guesses, feedback, numberOfGuesses.getNumberOfGuesses());
+                    remainingNumberOfGuesses--;
+                }
+                else{
+                    display.displayLoss();
+                    remainingNumberOfGuesses--;
+                }
 
-            if(analyser.checkIfWon(feedback.get(numberOfGuesses.getNumberOfGuesses()-remainingNumberOfGuesses))){
+            } while (remainingNumberOfGuesses>0);
 
-            }
+            playAgain = display.getUserChoice();
 
-            remainingNumberOfGuesses--;
-
-        } while (remainingNumberOfGuesses>0);
+        } while(playAgain.equals("Y"));
     }
 }

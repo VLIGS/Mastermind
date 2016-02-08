@@ -75,7 +75,7 @@ public class GameImpl extends GameAbstractImpl implements Game {
             remainingNumberOfGuesses--;
 
         } while (remainingNumberOfGuesses>0);
-        
+
 
     }
 }

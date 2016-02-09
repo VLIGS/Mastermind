@@ -2,12 +2,16 @@ import java.util.List;
 import java.util.Scanner;
 
 public class DisplayImpl implements Display{
-    private Scanner scan = new Scanner(System.in); //Spring
+    private Scanner scan;
+
+    public DisplayImpl(){
+        scan = new Scanner(System.in); //Spring
+    }
 
     @Override
     public void displayInstructions(PegColour pegColour, int numberOfPegs, int numberOfGuesses){
 
-        System.out.println("Welcome to Mastermind.\n" +
+        displayInstructions("\n" + "Welcome to Mastermind.\n" +
                 "\n" +
                 "This is a text version of the classic board game Mastermind.\n" +
                 "The computer will think of a secret code.\n" +
@@ -30,53 +34,61 @@ public class DisplayImpl implements Display{
 
     @Override
     public void displayInstructions(String instruction){
-        System.out.println("\n" + instruction);
+        System.out.println(instruction); //Spring
     }
     @Override
     public void displayInstructions(String instruction, boolean showCode){
         if(showCode){
-            System.out.println("\n" + instruction);
+            displayInstructions("\n" + instruction + "\n");
         }
     }
 
     @Override
     public String getGuess(int numberOfGuesses){
 
-        System.out.println("\n" + "You have " + numberOfGuesses + " guesses left" + "\n");
+        displayInstructions("\n" + "You have " + numberOfGuesses + " guesses left" + "\n");
 
-        System.out.println("\n" + "What is your next guess?\n" +
+        displayInstructions("\n" + "What is your next guess?\n" +
                 "Type in the characters for your guess and press enter.\n" +
-                "Enter guess:");
+                "Enter guess:" + "\n");
 
         return retrieveInput();
     }
 
     @Override
     public void displayResults(List guesses, List results, int NumberOfGuessesAllowed){
-            System.out.println("\n" + ".... Secret Code");
-            int j;
-            for (j = 0; j < guesses.size(); j++) {
-                System.out.println(guesses.get(j).toString() + " Result: " + results.get(j).toString());
-            }
+        displayInstructions("\n" + ".... Secret Code");
+            int j = guesses.size()-2;
+            displayResultsLine(guesses, results);
             for (int i = j; i < NumberOfGuessesAllowed; i++){
-                System.out.println("....");
+                displayInstructions("....");
             }
+    }
+    private void displayResultsLine(List guesses, List results){
+        int j;
+        for (j = 0; j < guesses.size(); j++) {
+            String resultLine = "";
+            Line line = (Line) results.get(j);
+            resultLine = guesses.get(j).toString() + " Result: ";
+            for (int r = 0; r < line.numberOfPegs(); r++) {
+                resultLine = resultLine + line.getPeg(r).getPegColour() + " ";
+            }
+            displayInstructions(resultLine);
+        }
     }
     @Override
     public void displayWin(List guesses, List results){
-        System.out.println(guesses.get(guesses.size()-1).toString());
-        for (int j = 0; j < guesses.size(); j++) {
-            System.out.println(guesses.get(j).toString() + " Result: " + results.get(j).toString());
-        }
-        System.out.println("You solved the puzzle! Good job.\n");
+        displayInstructions(guesses.get(guesses.size()-1).toString());
+        displayResultsLine(guesses, results);
+        displayInstructions("\n" + "You solved the puzzle! Good job.\n");
     }
     @Override
    public void displayLoss(){
-        System.out.println("You have used up all your turns unfortunately\n");
+        displayInstructions("\n" + "You have used up all your turns unfortunately\n");
     }
     @Override
     public String getUserChoice(){
-        System.out.println("Enter Y for another game or anything else to quit: ");
+        displayInstructions("\n" + "Enter Y for another game or anything else to quit: " + "\n");
         return retrieveInput();
     }
 

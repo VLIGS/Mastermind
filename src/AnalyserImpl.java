@@ -37,12 +37,6 @@ public class AnalyserImpl implements Analyser{
         return unscrambledResult;
     }
 
-    /**
-    @Override
-    public Line getScrambledPegResult(){
-        return null;
-    }
-     **/
     @Override
     public boolean checkIfWon(Line line, int length){
         Line winningFeedback = new LineImpl(); //Spring

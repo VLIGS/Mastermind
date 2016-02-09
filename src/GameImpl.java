@@ -32,14 +32,12 @@ public class GameImpl extends GameAbstractImpl implements Game {
         scrambler = new ScramblerImpl(); //Spring: need getInstance here
         errorChecker = new ErrorCheckerImpl();//Spring: need getInstance here
     }
-    private void clear(){
+    private void clearForNextGame(){
         guesses = new ArrayList<>();
         feedback = new ArrayList<>();
         display = new DisplayImpl(); //Spring
         codeGenerator = new CodeGeneratorImpl(); //Spring: need getInstance here
         analyser = new AnalyserImpl(); //Spring: need getInstance here
-        scrambler = new ScramblerImpl(); //Spring: need getInstance here
-        errorChecker = new ErrorCheckerImpl();//Spring: need getInstance here
     }
 
     /**
@@ -64,7 +62,7 @@ public class GameImpl extends GameAbstractImpl implements Game {
     public void runGames(){
 
         do {
-            clear();
+            clearForNextGame();
             display.displayInstructions(pegColours,numberOfPegs.getNumberOfPegs(),numberOfGuesses.getNumberOfGuesses());
             display.displayInstructions("Generating secret code ....");
             code = codeGenerator.getCode(pegColours, numberOfPegs);

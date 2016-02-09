@@ -9,9 +9,7 @@ GameImpl(gi)
 
     gi1: Create PegColour instance to pass in, connected to cg1
     gi2: Instantiate codeGenerator in constructor rather than in runGames //need to think whether codeGenerator might change during the game
-
-NumberOfPegs(ni)
-    ni1: instead of simple integer use class for the purposes of dependency injection
+    gi3: added clearForNextGame method to ensure clean start, related gi2
 
 Display(ds)
     ds1: don't have setNumberOfGuessesAllowed, setShowCode, setCode
@@ -34,4 +32,14 @@ Analyser(an)
 Line(ln)
     ln1: added stringToLine, related to an1, made it static // note this implementation just has letter for colour, not full string
                                                             // also different as it has PegImp, rather than Peg, related to pe1
+
+Feedback(fb)
+    fb1: use this class for providing response for each feedback scenario, instead of enum, tried enum, but run into restrictions
+
+NumberOfPegs(np)
+    np1: instead of simple integer use class for the purposes of dependency injection
+
+NumberOfGuesses(ng)
+    ng1: instead of simple integer use class for the purposes of dependency injection
+
 

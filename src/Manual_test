@@ -1146,3 +1146,289 @@ You have 12 guesses left
 What is your next guess?
 Type in the characters for your guess and press enter.
 Enter guess:
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                    TEST 4
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Welcome to Mastermind.
+
+This is a text version of the classic board game Mastermind.
+The computer will think of a secret code.
+The code consists of 4 colored pegs.
+The pegs may be one of 6 colors: [blue, green, orange, purple, red, yellow]
+A color may appear more than once in the code.
+
+You try to guess what colored pegs are in the code and what order they are in
+After making a guess the result will be displayed.
+A result consists of a black peg for each peg you have exactly correct (color and position) in your guess.
+For each peg in the guess that is the correct color, but is out of position, you get a white peg.
+
+Only the first letter of the color is displayed. B for Blue, R for Red, and so forth.
+When entering guesses you only need to enter the first character of the color as a capital letter.
+
+You have 12 tries to guess the answer or you lose the game.
+
+
+Generating secret code ....
+
+The secret code is GPRG
+
+You have 12 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+GPRG
+
+The secret code is GPRG
+GPRG
+GPRG Result: BlackBlackBlackBlack
+You solved the puzzle! Good job.
+
+Enter Y for another game or anything else to quit:
+n
+Welcome to Mastermind.
+
+This is a text version of the classic board game Mastermind.
+The computer will think of a secret code.
+The code consists of 4 colored pegs.
+The pegs may be one of 6 colors: [blue, green, orange, purple, red, yellow]
+A color may appear more than once in the code.
+
+You try to guess what colored pegs are in the code and what order they are in
+After making a guess the result will be displayed.
+A result consists of a black peg for each peg you have exactly correct (color and position) in your guess.
+For each peg in the guess that is the correct color, but is out of position, you get a white peg.
+
+Only the first letter of the color is displayed. B for Blue, R for Red, and so forth.
+When entering guesses you only need to enter the first character of the color as a capital letter.
+
+You have 12 tries to guess the answer or you lose the game.
+
+
+Generating secret code ....
+
+You have 12 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+BBPG
+
+.... Secret Code
+BBPG Result: White
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+
+You have 11 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+BYYY
+
+.... Secret Code
+BBPG Result: White
+BYYY Result: White
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+
+You have 10 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+OBRR
+
+.... Secret Code
+BBPG Result: White
+BYYY Result: White
+OBRR Result: WhiteWhiteBlack
+....
+....
+....
+....
+....
+....
+....
+....
+....
+
+You have 9 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+OBYY
+
+.... Secret Code
+BBPG Result: White
+BYYY Result: White
+OBRR Result: WhiteWhiteBlack
+OBYY Result: White
+....
+....
+....
+....
+....
+....
+....
+....
+
+You have 8 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+ORBR
+
+.... Secret Code
+BBPG Result: White
+BYYY Result: White
+OBRR Result: WhiteWhiteBlack
+OBYY Result: White
+ORBR Result: BlackWhiteWhite
+....
+....
+....
+....
+....
+....
+....
+
+You have 7 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+ROBR
+
+.... Secret Code
+BBPG Result: White
+BYYY Result: White
+OBRR Result: WhiteWhiteBlack
+OBYY Result: White
+ORBR Result: BlackWhiteWhite
+ROBR Result: WhiteWhiteBlack
+....
+....
+....
+....
+....
+....
+
+You have 6 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+BRYR
+
+.... Secret Code
+BBPG Result: White
+BYYY Result: White
+OBRR Result: WhiteWhiteBlack
+OBYY Result: White
+ORBR Result: BlackWhiteWhite
+ROBR Result: WhiteWhiteBlack
+BRYR Result: WhiteBlackWhite
+....
+....
+....
+....
+....
+
+You have 5 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+BRRP
+
+.... Secret Code
+BBPG Result: White
+BYYY Result: White
+OBRR Result: WhiteWhiteBlack
+OBYY Result: White
+ORBR Result: BlackWhiteWhite
+ROBR Result: WhiteWhiteBlack
+BRYR Result: WhiteBlackWhite
+BRRP Result: WhiteBlackBlack
+....
+....
+....
+....
+
+You have 4 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+ORRB
+
+.... Secret Code
+BBPG Result: White
+BYYY Result: White
+OBRR Result: WhiteWhiteBlack
+OBYY Result: White
+ORBR Result: BlackWhiteWhite
+ROBR Result: WhiteWhiteBlack
+BRYR Result: WhiteBlackWhite
+BRRP Result: WhiteBlackBlack
+ORRB Result: BlackBlackBlack
+....
+....
+....
+
+You have 3 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+RRRB
+RRRB
+BBPG Result: White
+BYYY Result: White
+OBRR Result: WhiteWhiteBlack
+OBYY Result: White
+ORBR Result: BlackWhiteWhite
+ROBR Result: WhiteWhiteBlack
+BRYR Result: WhiteBlackWhite
+BRRP Result: WhiteBlackBlack
+ORRB Result: BlackBlackBlack
+RRRB Result: BlackBlackBlackBlack
+You solved the puzzle! Good job.
+
+Enter Y for another game or anything else to quit:
+n
+
+Process finished with exit code 0

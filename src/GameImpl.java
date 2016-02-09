@@ -79,7 +79,7 @@ public class GameImpl extends GameAbstractImpl implements Game {
                 feedback.add(scrambler.scramble(analyser.analyseGuess(guesses.get(numberOfGuesses.getNumberOfGuesses()-remainingNumberOfGuesses),code)));
                 display.displayInstructions("The secret code is " + code.toString(), showCode);
 
-                if(analyser.checkIfWon(feedback.get(numberOfGuesses.getNumberOfGuesses()-remainingNumberOfGuesses))){
+                if(analyser.checkIfWon(feedback.get(numberOfGuesses.getNumberOfGuesses()-remainingNumberOfGuesses),numberOfPegs.getNumberOfPegs())){
                     display.displayWin(guesses, feedback);
                     remainingNumberOfGuesses = 0;
                 }
@@ -96,6 +96,6 @@ public class GameImpl extends GameAbstractImpl implements Game {
 
             playAgain = display.getUserChoice();
 
-        } while(playAgain.equals("Y"));
+        } while(playAgain.toUpperCase().equals("Y"));
     }
 }

@@ -18,7 +18,7 @@ public interface Analyser {
      *
      * @return
      */
-    boolean checkIfWon(Line line);
+    boolean checkIfWon(Line line, int length);
 
 
 

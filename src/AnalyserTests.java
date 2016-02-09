@@ -41,13 +41,20 @@ public class AnalyserTests {
     @Test
     public void test_IfWon_with_NoMatchingPegs () {
         guess = new LineImpl(new PegImpl("P"),new PegImpl("P"), new PegImpl("P"), new PegImpl("P"));
-        assertEquals(false, analyser.checkIfWon(analyser.analyseGuess(guess,code)));
+        assertEquals(false, analyser.checkIfWon(analyser.analyseGuess(guess,code),code.numberOfPegs()));
     }
 
     @Test
     public void test_IfWon_with_AllMatchingPegsAllMatchingPosition () {
         guess = new LineImpl(new PegImpl(code.getPeg(0).getPegColour()), new PegImpl(code.getPeg(1).getPegColour()), new PegImpl(code.getPeg(2).getPegColour()), new PegImpl(code.getPeg(3).getPegColour()));
-        assertEquals(true, analyser.checkIfWon(analyser.analyseGuess(guess,code)));
+        assertEquals(true, analyser.checkIfWon(analyser.analyseGuess(guess,code),code.numberOfPegs()));
+    }
+
+    @Test
+    public void test_IfWon_with_OnlyOneMatchingPegOneMatchingPosition () {
+        Peg notMatchingPeg = new PegImpl("O");
+        guess = new LineImpl(new PegImpl(code.getPeg(0).getPegColour()), notMatchingPeg, notMatchingPeg, notMatchingPeg);
+        assertEquals(false, analyser.checkIfWon(analyser.analyseGuess(guess,code),code.numberOfPegs()));
     }
 
 }

@@ -44,10 +44,10 @@ public class AnalyserImpl implements Analyser{
     }
      **/
     @Override
-    public boolean checkIfWon(Line line){
+    public boolean checkIfWon(Line line, int length){
         Line winningFeedback = new LineImpl(); //Spring
 
-        for(int i = 0; i<line.numberOfPegs(); i++){
+        for(int i = 0; i<length; i++){
             winningFeedback.addPeg(new PegImpl(Feedback.getExactMatch())); //Spring
         }
 

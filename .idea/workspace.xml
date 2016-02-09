@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11459cce-7333-4a7c-96dc-db8f170d2f7c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Analyser.java" afterPath="$PROJECT_DIR$/src/Analyser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AnalyserImpl.java" afterPath="$PROJECT_DIR$/src/AnalyserImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AnalyserTests.java" afterPath="$PROJECT_DIR$/src/AnalyserTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Differences" afterPath="$PROJECT_DIR$/src/Differences" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameImpl.java" afterPath="$PROJECT_DIR$/src/GameImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Manual_test" afterPath="$PROJECT_DIR$/src/Manual_test" />
     </list>
     <ignored path="cw-two.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,16 +39,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Line.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Line.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Differences" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Differences">
           <provider selected="true" editor-type-id="text-editor">
@@ -62,31 +53,18 @@
         <entry file="file://$PROJECT_DIR$/src/AnalyserImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <caret line="58" column="1" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Peg.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Peg.java">
+      <file leaf-file-name="Analyser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Analyser.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="26" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="26" />
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PegImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PegImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-              <folding>
-                <element signature="e#168#169#0" expanded="true" />
-                <element signature="e#197#198#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -94,13 +72,35 @@
       <file leaf-file-name="GameImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GameImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7886978">
-              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6683047">
+              <caret line="98" column="53" selection-start-line="98" selection-start-column="53" selection-end-line="98" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#GameImpl#0;class#GameImpl#0" expanded="false" />
                 <element signature="method#clear#0;class#GameImpl#0" expanded="false" />
+                <element signature="docComment;method#getShowCode#0;class#GameImpl#0" expanded="false" />
                 <element signature="method#getShowCode#0;class#GameImpl#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SampleOutput.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SampleOutput.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Manual_test" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Manual_test">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1148" column="0" selection-start-line="1148" selection-start-column="0" selection-end-line="1148" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -133,7 +133,7 @@
         <entry file="file://$PROJECT_DIR$/src/AnalyserTests.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <caret line="43" column="101" selection-start-line="43" selection-start-column="101" selection-end-line="43" selection-end-column="101" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -193,14 +193,14 @@
         <option value="$PROJECT_DIR$/src/Thoughts_ToDo_Improvements" />
         <option value="$PROJECT_DIR$/src/Display.java" />
         <option value="$PROJECT_DIR$/src/DisplayImpl.java" />
-        <option value="$PROJECT_DIR$/src/Manual_test" />
-        <option value="$PROJECT_DIR$/src/Analyser.java" />
         <option value="$PROJECT_DIR$/src/Line.java" />
         <option value="$PROJECT_DIR$/src/LineImpl.java" />
         <option value="$PROJECT_DIR$/src/Differences" />
-        <option value="$PROJECT_DIR$/src/GameImpl.java" />
+        <option value="$PROJECT_DIR$/src/Analyser.java" />
         <option value="$PROJECT_DIR$/src/AnalyserImpl.java" />
         <option value="$PROJECT_DIR$/src/AnalyserTests.java" />
+        <option value="$PROJECT_DIR$/src/GameImpl.java" />
+        <option value="$PROJECT_DIR$/src/Manual_test" />
       </list>
     </option>
   </component>
@@ -898,19 +898,13 @@
       <option name="number" value="Default" />
       <updated>1454495869913</updated>
       <workItem from="1454495874446" duration="33781000" />
-      <workItem from="1454849953253" duration="60397000" />
+      <workItem from="1454849953253" duration="65387000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
     <history-entry file="AllTests - 2016.02.08 at 18h 20m 07s.xml">
       <configuration name="AllTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AnalyserTests - 2016.02.08 at 18h 10m 27s.xml">
-      <configuration name="AnalyserTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AnalyserTests - 2016.02.08 at 18h 11m 02s.xml">
-      <configuration name="AnalyserTests" configurationId="JUnit" />
     </history-entry>
     <history-entry file="AnalyserTests - 2016.02.08 at 18h 19m 13s.xml">
       <configuration name="AnalyserTests" configurationId="JUnit" />
@@ -933,13 +927,19 @@
     <history-entry file="AnalyserTests - 2016.02.08 at 23h 48m 05s.xml">
       <configuration name="AnalyserTests" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AnalyserTests - 2016.02.09 at 08h 58m 19s.xml">
+      <configuration name="AnalyserTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AnalyserTests - 2016.02.09 at 09h 12m 43s.xml">
+      <configuration name="AnalyserTests" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94178000" />
+    <option name="totallyTimeSpent" value="99168000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="718" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -949,7 +949,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32973805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32973805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -980,27 +980,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/GameImpl.java</url>
-          <line>82</line>
-          <properties />
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/GameImpl.java</url>
-          <line>87</line>
-          <properties />
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/GameImpl.java</url>
-          <line>90</line>
-          <properties />
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="51" />
+      <option name="time" value="52" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1091,7 +1071,9 @@
           <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#GameImpl#0;class#GameImpl#0" expanded="false" />
             <element signature="method#clear#0;class#GameImpl#0" expanded="false" />
+            <element signature="docComment;method#getShowCode#0;class#GameImpl#0" expanded="false" />
             <element signature="method#getShowCode#0;class#GameImpl#0" expanded="false" />
           </folding>
         </state>
@@ -1344,30 +1326,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Manual_test">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="58" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Analyser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SampleOutput.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Peg.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1411,16 +1369,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AnalyserTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ScramblerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1441,21 +1389,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Analyser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AnalyserImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <caret line="58" column="1" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AnalyserTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="101" selection-start-line="43" selection-start-column="101" selection-end-line="43" selection-end-column="101" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SampleOutput.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Manual_test">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1148" column="0" selection-start-line="1148" selection-start-column="0" selection-end-line="1148" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GameImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7886978">
-          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6683047">
+          <caret line="98" column="53" selection-start-line="98" selection-start-column="53" selection-end-line="98" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#GameImpl#0;class#GameImpl#0" expanded="false" />
             <element signature="method#clear#0;class#GameImpl#0" expanded="false" />
+            <element signature="docComment;method#getShowCode#0;class#GameImpl#0" expanded="false" />
             <element signature="method#getShowCode#0;class#GameImpl#0" expanded="false" />
           </folding>
         </state>

@@ -32,6 +32,15 @@ public class GameImpl extends GameAbstractImpl implements Game {
         scrambler = new ScramblerImpl(); //Spring: need getInstance here
         errorChecker = new ErrorCheckerImpl();//Spring: need getInstance here
     }
+    private void clear(){
+        guesses = new ArrayList<>();
+        feedback = new ArrayList<>();
+        display = new DisplayImpl(); //Spring
+        codeGenerator = new CodeGeneratorImpl(); //Spring: need getInstance here
+        analyser = new AnalyserImpl(); //Spring: need getInstance here
+        scrambler = new ScramblerImpl(); //Spring: need getInstance here
+        errorChecker = new ErrorCheckerImpl();//Spring: need getInstance here
+    }
 
     /**
     private static GameImpl instance = null;  //static constructor block
@@ -55,11 +64,12 @@ public class GameImpl extends GameAbstractImpl implements Game {
     public void runGames(){
 
         do {
-        display.displayInstructions(pegColours,numberOfPegs.getNumberOfPegs(),numberOfGuesses.getNumberOfGuesses());
-        display.displayInstructions("Generating secret code ....");
-        code = codeGenerator.getCode(pegColours, numberOfPegs);
-        display.displayInstructions("The secret code is " + code.toString(), showCode);
-        int remainingNumberOfGuesses = numberOfGuesses.getNumberOfGuesses();
+            clear();
+            display.displayInstructions(pegColours,numberOfPegs.getNumberOfPegs(),numberOfGuesses.getNumberOfGuesses());
+            display.displayInstructions("Generating secret code ....");
+            code = codeGenerator.getCode(pegColours, numberOfPegs);
+            display.displayInstructions("The secret code is " + code.toString(), showCode);
+            int remainingNumberOfGuesses = numberOfGuesses.getNumberOfGuesses();
             do {
                 String guess = "";
                 while (!errorChecker.isValidGuess(guess,pegColours.getAllColours(),numberOfPegs.getNumberOfPegs())) {

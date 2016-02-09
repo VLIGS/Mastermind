@@ -34,4 +34,4 @@ Analyser(an)
 Line(ln)
     ln1: added stringToLine, related to an1, made it static // note this implementation just has letter for colour, not full string
                                                             // also different as it has PegImp, rather than Peg, related to pe1
-   
+

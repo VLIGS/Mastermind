@@ -31,14 +31,6 @@ public class AnalyserTests {
     }
 
     @Test
-    public void test_analyseGuess_with_AllMatchingPegsSecondMatchingPosition () {
-        guess = new LineImpl(new PegImpl(code.getPeg(3).getPegColour()),new PegImpl(code.getPeg(1).getPegColour()), new PegImpl(code.getPeg(0).getPegColour()), new PegImpl(code.getPeg(2).getPegColour()));
-        Line expected = new LineImpl(new PegImpl(Feedback.getSymbolMatch()),new PegImpl(Feedback.getExactMatch()), new PegImpl(Feedback.getSymbolMatch()), new PegImpl(Feedback.getSymbolMatch()));
-        Line actual = analyser.analyseGuess(guess,code);
-        assertEquals(expected.toString(),actual.toString());
-    }
-
-    @Test
     public void test_analyseGuess_with_NoMatchingPegs () {
         guess = new LineImpl(new PegImpl("P"),new PegImpl("P"), new PegImpl("P"), new PegImpl("P"));
         Line expected = new LineImpl(new PegImpl(Feedback.getNoMatch()));

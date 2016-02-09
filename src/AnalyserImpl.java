@@ -1,49 +1,37 @@
 public class AnalyserImpl implements Analyser{
+
     @Override
     public Line  analyseGuess(Line guess, Line code){
-        int numberOfBlacks = 0;
-        int numberOfWhites = 0;
+        int exactMatch = 0;
+        int colourMatch = 0;
+        boolean[] codeUsed = new boolean[code.numberOfPegs()];
+        boolean[] guessUsed = new boolean[guess.numberOfPegs()];
 
-        Line unscrambledResult;
-        unscrambledResult= new LineImpl(); //Spring
+        Line unscrambledResult = new LineImpl(); //Spring
 
-        for(int i = 0; i < guess.numberOfPegs(); i ++){
-            String pegColour = code.getPeg(i).getPegColour();
-            for(int j = 0; j < guess.numberOfPegs(); j++){
-                if(pegColour.equals(guess.getPeg(j).getPegColour())){
-                    if (i == j){
-                        unscrambledResult.addPeg(new PegImpl(Feedback.getExactMatch())); //Spring
-                        numberOfBlacks++;
-                    } else {
-                        unscrambledResult.addPeg(new PegImpl(Feedback.getSymbolMatch())); //Spring
-                        numberOfWhites++;
-                    }
+        // Compare correct color and position
+        for (int i = 0; i < code.numberOfPegs(); i++) {
+            if (code.getPeg(i).getPegColour().equals(guess.getPeg(i).getPegColour())) {
+                exactMatch++;
+                unscrambledResult.addPeg(new PegImpl(Feedback.getExactMatch()));
+                codeUsed[i] = guessUsed[i] = true;
+            }
+        }
+
+        // Compare matching colors for "pins" that were not used
+        for (int i = 0; i < code.numberOfPegs(); i++) {
+            for (int j = 0; j < guess.numberOfPegs(); j++) {
+                if (!codeUsed[i] && !guessUsed[j] && code.getPeg(i).getPegColour().equals(guess.getPeg(j).getPegColour())) {
+                    colourMatch++;
+                    unscrambledResult.addPeg(new PegImpl(Feedback.getSymbolMatch()));
+                    codeUsed[i] = guessUsed[j] = true;
+                    break;
                 }
             }
         }
 
-        /**
 
-        for(int i = 0; i < guess.numberOfPegs(); i ++){
-            String pegColour = code.getPeg(i).getPegColour();
-            for(int j = 0; j < guess.numberOfPegs(); j++){
-                if(pegColour.equals(guess.getPeg(j).getPegColour())){
-                    if (i == j){
-                        unscrambledResult.addPeg(new PegImpl(Feedback.getExactMatch())); //Spring
-                        //System.out.println(FeedbackColours.getNameFor(FeedbackColours.EXACTMATCH));
-                        numberOfBlacks++;
-                    } else {
-                        unscrambledResult.addPeg(new PegImpl(Feedback.getSymbolMatch())); //Spring
-                        //System.out.println(FeedbackColours.getNameFor(FeedbackColours.MATCH));
-                        numberOfWhites++;
-                    }
-                }
-            }
-        }
-         **/
-
-
-        if(numberOfBlacks == 0 && numberOfWhites == 0){
+        if(exactMatch == 0 && colourMatch == 0){
             unscrambledResult.addPeg(new PegImpl(Feedback.getNoMatch()));
         }
         return unscrambledResult;

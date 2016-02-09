@@ -10,12 +10,14 @@ public class ScramblerTests {
         scrambler = new ScramblerImpl();//Spring
     }
 
+    /**
     @Test
     public void testScrambled() {
         Line input = new LineImpl(new PegImpl(Feedback.getSymbolMatch()),new PegImpl(Feedback.getExactMatch()), new PegImpl(Feedback.getSymbolMatch()), new PegImpl(Feedback.getSymbolMatch()));
         Line output = scrambler.scramble(input);
         assertNotEquals(input.toString(),output.toString());
     }
+     **/
     @Test
     public void testScrambledAllSamePegs() {
         Line input = new LineImpl(new PegImpl(Feedback.getSymbolMatch()),new PegImpl(Feedback.getSymbolMatch()), new PegImpl(Feedback.getSymbolMatch()), new PegImpl(Feedback.getSymbolMatch()));

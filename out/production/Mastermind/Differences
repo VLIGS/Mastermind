@@ -19,6 +19,7 @@ Display(ds)
     ds5: don't have guessAgain, maybe introduce this improvement later
     ds6: overloaded displayInstructions to pass in simple string and boolean, to have flexibility whether want to display it or not
     ds7: displayResults moved display of secret code out, think they are two separate things
+    ds8: Wrapped System.out.println in single function, so that it is easy to change in one place if want to use different output method
 
 ErrorChecker(ec)
     er1: implemented isValidGuess by passing in all the necessary parameters for checking rather than relying on internal parameters

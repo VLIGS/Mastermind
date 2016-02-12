@@ -12,6 +12,9 @@
     <context:annotation-config />
 
     <bean id="errorChecker" class="ErrorCheckerImpl"/>
+    <bean id="pegcolour" class="PegColourImpl">
+        <property name="colours" value="blue green orange purple red yellow"/>
+    </bean>
    <!-- <bean id="game" class="GameImpl(easy)"/> -->
     <bean id="analyser" class="AnalyserImpl"/>
     <bean id="display" class="DisplayImpl"/>
@@ -25,6 +28,5 @@
     <bean id="numberofpegs" class="NumberOfPegs">
         <property name="numberOfPegs" value="4"/>
     </bean>
-
 
 </beans>

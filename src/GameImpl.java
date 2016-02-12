@@ -1,8 +1,7 @@
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GameImpl extends GameAbstractImpl implements Game {
+public class GameImpl implements Game {
     private Display display;
     private CodeGenerator codeGenerator;
     private Line code;
@@ -18,12 +17,12 @@ public class GameImpl extends GameAbstractImpl implements Game {
     private String playAgain;
 
     public GameImpl(boolean easy){
-        super(easy);
         this.showCode = easy;
         guesses = new ArrayList<>();
         feedback = new ArrayList<>();
 
-        pegColours = new PegColourImpl("blue", "green", "orange", "purple", "red", "yellow"); //Spring: need getInstance here
+        //pegColours = new PegColourImpl("blue", "green", "orange", "purple", "red", "yellow"); //Spring: need getInstance here
+        pegColours = Factory.getPegColours();
         //numberOfPegs = new NumberOfPegs(4); //Spring: need getInstance here
         numberOfPegs = Factory.getNumberOfPegs();
         //numberOfGuesses = new NumberOfGuesses(12; //Spring: need getInstance here
@@ -60,14 +59,7 @@ public class GameImpl extends GameAbstractImpl implements Game {
         return instance;
     }
      **/
-    public boolean getShowCode(){
-        try{
-            Field field = GameAbstractImpl.class.getField("showCode");
-        } catch(NoSuchFieldException e){
-            System.out.println("No such field");
-        }
-        return true;
-    }
+
     @Override
     public void runGames(){
 

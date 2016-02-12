@@ -17,7 +17,8 @@ public class CodeGeneratorTests {
     public final void setUp() {
         pegColours = new PegColourImpl("blue", "green", "orange", "purple", "red", "yellow");
         pegColoursOther = new PegColourImpl("apricot", "cobalt", "denim", "ecru", "flax", "indigo");
-        codeLength = new NumberOfPegs(4);
+        //codeLength = new NumberOfPegs(4);
+        codeLength = Factory.getNumberOfPegs();
         codeGenerator = new CodeGeneratorImpl();
     }
 

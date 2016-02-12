@@ -24,8 +24,10 @@ public class GameImpl extends GameAbstractImpl implements Game {
         feedback = new ArrayList<>();
 
         pegColours = new PegColourImpl("blue", "green", "orange", "purple", "red", "yellow"); //Spring: need getInstance here
-        numberOfPegs = new NumberOfPegs(4); //Spring: need getInstance here
-        numberOfGuesses = new NumberOfGuesses(12); //Spring: need getInstance here
+        //numberOfPegs = new NumberOfPegs(4); //Spring: need getInstance here
+        numberOfPegs = Factory.getNumberOfPegs();
+        //numberOfGuesses = new NumberOfGuesses(12; //Spring: need getInstance here
+        numberOfGuesses = Factory.getNumberOfGuesses();
         //display = new DisplayImpl(); //Spring
         display = Factory.getDisplay();
         //codeGenerator = new CodeGeneratorImpl(); //Spring: need getInstance here

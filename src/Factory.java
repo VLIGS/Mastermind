@@ -27,12 +27,18 @@ public class Factory {
     public static CodeGenerator getCodeGenerator() {
         return (CodeGenerator) factory.getBean("codegenerator");
     }
+    public static NumberOfGuesses getNumberOfGuesses() {
+        return (NumberOfGuesses) factory.getBean("numberofguesses");
+    }
+    public static NumberOfPegs getNumberOfPegs() {
+        return (NumberOfPegs) factory.getBean("numberofpegs");
+    }
     private static BeanFactory getBeanFactory() {
         // create a bean factory from beans.xml file
         BeanFactory factory = new ClassPathXmlApplicationContext("beans.xml");
         return factory;
     }
-        /**
+     /**
         String myClassName = c.getName();
         Constructor myConstructor = null;
         Class parameters [] = new Class [0];

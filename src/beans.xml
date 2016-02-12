@@ -19,5 +19,12 @@
     <bean id="errorchecker" class="ErrorCheckerImpl"/>
     <bean id="randomgenerator" class="RandomGeneratorImpl"/>
     <bean id="scrambler" class="ScramblerImpl"/>
+    <bean id="numberofguesses" class="NumberOfGuesses">
+        <property name="numberOfGuesses" value="12"/>
+    </bean>
+    <bean id="numberofpegs" class="NumberOfPegs">
+        <property name="numberOfPegs" value="4"/>
+    </bean>
+
 
 </beans>

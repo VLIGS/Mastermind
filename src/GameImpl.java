@@ -28,18 +28,22 @@ public class GameImpl extends GameAbstractImpl implements Game {
         numberOfGuesses = new NumberOfGuesses(12); //Spring: need getInstance here
         //display = new DisplayImpl(); //Spring
         display = Factory.getDisplay();
-        codeGenerator = new CodeGeneratorImpl(); //Spring: need getInstance here
+        //codeGenerator = new CodeGeneratorImpl(); //Spring: need getInstance here
+        codeGenerator = Factory.getCodeGenerator();
         //analyser = new AnalyserImpl(); //Spring: need getInstance here
         analyser = Factory.getAnalyser();
-        scrambler = new ScramblerImpl(); //Spring: need getInstance here
-        errorChecker = new ErrorCheckerImpl();//Spring: need getInstance here
+        //scrambler = new ScramblerImpl(); //Spring: need getInstance here
+        scrambler = Factory.getScrambler();
+        //errorChecker = new ErrorCheckerImpl();//Spring: need getInstance here
+        errorChecker = Factory.getErrorChecker();
     }
     private void clearForNextGame(){
         guesses = new ArrayList<>();
         feedback = new ArrayList<>();
         //display = new DisplayImpl(); //Spring
         display = Factory.getDisplay();
-        codeGenerator = new CodeGeneratorImpl(); //Spring: need getInstance here
+        //codeGenerator = new CodeGeneratorImpl(); //Spring: need getInstance here
+        codeGenerator = Factory.getCodeGenerator();
         //analyser = new AnalyserImpl(); //Spring: need getInstance here
         analyser = Factory.getAnalyser();
     }

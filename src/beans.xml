@@ -11,10 +11,13 @@
     <!-- enable the usage of annotations -->
     <context:annotation-config />
 
-    <bean id="errorChecker"
-          class="ErrorCheckerImpl"/>
-    <bean id="analyser"
-          class="AnalyserImpl"/>
-    <bean id="display"
-          class="DisplayImpl"/>
+    <bean id="errorChecker" class="ErrorCheckerImpl"/>
+   <!-- <bean id="game" class="GameImpl(easy)"/> -->
+    <bean id="analyser" class="AnalyserImpl"/>
+    <bean id="display" class="DisplayImpl"/>
+    <bean id="codegenerator" class="CodeGeneratorImpl"/>
+    <bean id="errorchecker" class="ErrorCheckerImpl"/>
+    <bean id="randomgenerator" class="RandomGeneratorImpl"/>
+    <bean id="scrambler" class="ScramblerImpl"/>
+
 </beans>

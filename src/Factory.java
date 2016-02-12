@@ -5,7 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Factory {
     private static BeanFactory factory = getBeanFactory();
 
-    public static Game getInstance(Class c, Boolean b) {
+    public static Game getInstance(Boolean b) {
         return new GameImpl(b);
     }
    // @Autowired
@@ -14,6 +14,18 @@ public class Factory {
     }
     public static Display getDisplay() {
         return (Display)factory.getBean("display");
+    }
+    public static Scrambler getScrambler() {
+        return (Scrambler) factory.getBean("scrambler");
+    }
+    public static RandomGenerator getRandomGenerator() {
+        return (RandomGenerator) factory.getBean("randomgenerator");
+    }
+    public static ErrorChecker getErrorChecker() {
+        return (ErrorChecker) factory.getBean("errorchecker");
+    }
+    public static CodeGenerator getCodeGenerator() {
+        return (CodeGenerator) factory.getBean("codegenerator");
     }
     private static BeanFactory getBeanFactory() {
         // create a bean factory from beans.xml file

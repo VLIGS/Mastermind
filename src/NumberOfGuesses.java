@@ -1,11 +1,11 @@
 
 public class NumberOfGuesses {
     int numberOfGuesses;
-    public NumberOfGuesses(int numberOfPegs){
-        this.numberOfGuesses = numberOfPegs;
+    public NumberOfGuesses(int numberOfGuesses){
+        this.numberOfGuesses = numberOfGuesses;
     }
-    public void setNumberOfGuesses(int numberOfPegs){
-        this.numberOfGuesses = numberOfPegs;
+    public void setNumberOfGuesses(int numberOfGuesses){
+        this.numberOfGuesses = numberOfGuesses;
     }
     public int getNumberOfGuesses(){
         return numberOfGuesses;

@@ -1,3 +1,4 @@
+//@Service
 public class AnalyserImpl implements Analyser{
 
     @Override

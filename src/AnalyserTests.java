@@ -10,7 +10,8 @@ public class AnalyserTests {
 
     @Before
     public final void setUp() {
-        analyser = new AnalyserImpl();
+        //analyser = new AnalyserImpl();
+        analyser = Factory.getAnalyser();
         code = new LineImpl(new PegImpl("R"),new PegImpl("B"), new PegImpl("Y"), new PegImpl("G"));
     }
 

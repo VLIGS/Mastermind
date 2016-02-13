@@ -1,16 +1,22 @@
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-//@Service
 public class Factory {
     private static BeanFactory factory = getBeanFactory();
-    //private static Peg peg = (Peg)factory.getBean("peg");
+    //private static Feedback feedback;
 
     public static Game getInstance(Boolean b) {
-        //return  (Game)factory.getBean("game");
-        return new GameImpl(b);
+        //Game g = (Game)factory.getBean("game");
+        Game g = new GameImpl();
+        g.setShowCode(b);
+        return g;
+
     }
-   // @Autowired
+    /**
+    public static void getFeedback(){
+        feedback = (Feedback)factory.getBean("feedback");
+    }
+     **/
     public static Analyser getAnalyser() {
         return (Analyser)factory.getBean("analyser");
     }
@@ -24,7 +30,7 @@ public class Factory {
         //return (Line)factory.getBean("pegline");
     }
     public static Peg getPeg(String colour) {
-        //Peg peg = (Peg)factory.getBean("peg");
+        //Peg pegToReturn = peg.
         Peg peg = new PegImpl();
         peg.setPeg(colour);
         return peg;

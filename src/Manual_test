@@ -1432,3 +1432,518 @@ Enter Y for another game or anything else to quit:
 n
 
 Process finished with exit code 0
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                                    TEST AFTER SPRING 1
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/bin/java -Didea.launcher.port=7537 "-Didea.launcher.bin.path=/Applications/IntelliJ IDEA 15.app/Contents/bin" -Dfile.encoding=UTF-8 -classpath "/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/lib/packager.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/lib/tools.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/jfxswt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/ext/jaccess.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/ext/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Users/lulu/IdeaProjects/Mastermind/out/production/Mastermind:/Applications/IntelliJ IDEA 15.app/Contents/lib/junit-4.12.jar:/Applications/IntelliJ IDEA 15.app/Contents/lib/hamcrest-core-1.3.jar:/Users/lulu/IdeaProjects/Mastermind/lib/spring-aspects-4.2.4.RELEASE.jar:/Users/lulu/IdeaProjects/Mastermind/lib/spring-context-support-4.2.4.RELEASE.jar:/Users/lulu/IdeaProjects/Mastermind/lib/spring-aop-4.2.4.RELEASE.jar:/Users/lulu/IdeaProjects/Mastermind/lib/spring-expression-4.2.4.RELEASE.jar:/Users/lulu/IdeaProjects/Mastermind/lib/spring-beans-4.2.4.RELEASE.jar:/Users/lulu/IdeaProjects/Mastermind/lib/spring-instrument-4.2.4.RELEASE.jar:/Users/lulu/IdeaProjects/Mastermind/lib/spring-instrument-tomcat-4.2.4.RELEASE.jar:/Users/lulu/IdeaProjects/Mastermind/lib/spring-context-4.2.4.RELEASE.jar:/Users/lulu/IdeaProjects/Mastermind/lib/spring-jms-4.2.4.RELEASE.jar:/Users/lulu/IdeaProjects/Mastermind/lib/spring-messaging-4.2.4.RELEASE.jar:/Users/lulu/IdeaProjects/Mastermind/lib/spring-oxm-4.2.4.RELEASE.jar:/Users/lulu/IdeaProjects/Mastermind/lib/spring-jdbc-4.2.4.RELEASE.jar:/Users/lulu/IdeaProjects/Mastermind/lib/spring-orm-4.2.4.RELEASE.jar:/Users/lulu/IdeaProjects/Mastermind/lib/commons-logging-1.1.3.jar:/Users/lulu/IdeaProjects/Mastermind/lib/aopalliance-1.0.jar:/Users/lulu/IdeaProjects/Mastermind/lib/spring-core-4.2.4.RELEASE.jar:/Users/lulu/IdeaProjects/Mastermind/lib/spring-tx-4.2.4.RELEASE.jar:/Users/lulu/IdeaProjects/Mastermind/lib/spring-test-4.2.4.RELEASE.jar:/Applications/IntelliJ IDEA 15.app/Contents/lib/idea_rt.jar" com.intellij.rt.execution.application.AppMain MastermindDriver
+Feb 13, 2016 3:49:04 PM org.springframework.context.support.ClassPathXmlApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@28c97a5: startup date [Sat Feb 13 15:49:04 GMT 2016]; root of context hierarchy
+Feb 13, 2016 3:49:05 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [beans.xml]
+
+Welcome to Mastermind.
+
+This is a text version of the classic board game Mastermind.
+The computer will think of a secret code.
+The code consists of 4 colored pegs.
+The pegs may be one of 6 colors: [blue, green, orange, purple, red, yellow]
+A color may appear more than once in the code.
+
+You try to guess what colored pegs are in the code and what order they are in
+After making a guess the result will be displayed.
+A result consists of a black peg for each peg you have exactly correct (color and position) in your guess.
+For each peg in the guess that is the correct color, but is out of position, you get a white peg.
+
+Only the first letter of the color is displayed. B for Blue, R for Red, and so forth.
+When entering guesses you only need to enter the first character of the color as a capital letter.
+
+You have 12 tries to guess the answer or you lose the game.
+
+Generating secret code ....
+
+The secret code is BGBG
+
+
+You have 12 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+
+BGOO
+
+The secret code is BGBG
+
+
+.... Secret Code
+BGOO Result: Black Black
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+
+You have 11 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+
+BGOO
+
+The secret code is BGBG
+
+
+.... Secret Code
+BGOO Result: Black Black
+BGOO Result: Black Black
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+
+You have 10 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+
+BGOO
+
+The secret code is BGBG
+
+
+.... Secret Code
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+
+You have 9 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+
+BGOO
+
+The secret code is BGBG
+
+
+.... Secret Code
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+
+You have 8 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+
+BGOO
+
+The secret code is BGBG
+
+
+.... Secret Code
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+....
+....
+....
+....
+....
+....
+....
+....
+....
+
+You have 7 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+
+BGOO
+
+The secret code is BGBG
+
+
+.... Secret Code
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+....
+....
+....
+....
+....
+....
+....
+....
+
+You have 6 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+
+BGOO
+
+The secret code is BGBG
+
+
+.... Secret Code
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+....
+....
+....
+....
+....
+....
+....
+
+You have 5 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+
+BGOO
+
+The secret code is BGBG
+
+
+.... Secret Code
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+....
+....
+....
+....
+....
+....
+
+You have 4 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+
+BGOO
+
+The secret code is BGBG
+
+
+.... Secret Code
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+....
+....
+....
+....
+....
+
+You have 3 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+
+BGOO
+
+The secret code is BGBG
+
+
+.... Secret Code
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+....
+....
+....
+....
+
+You have 2 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+
+BGOO
+
+The secret code is BGBG
+
+
+.... Secret Code
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+BGOO Result: Black Black
+....
+....
+....
+
+You have 1 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+
+BGOO
+
+The secret code is BGBG
+
+
+You have used up all your turns unfortunately
+
+
+Enter Y for another game or anything else to quit:
+
+n
+
+Welcome to Mastermind.
+
+This is a text version of the classic board game Mastermind.
+The computer will think of a secret code.
+The code consists of 4 colored pegs.
+The pegs may be one of 12 colors: [blue, green, orange, purple, red, yellow, blue, green, orange, purple, red, yellow]
+A color may appear more than once in the code.
+
+You try to guess what colored pegs are in the code and what order they are in
+After making a guess the result will be displayed.
+A result consists of a black peg for each peg you have exactly correct (color and position) in your guess.
+For each peg in the guess that is the correct color, but is out of position, you get a white peg.
+
+Only the first letter of the color is displayed. B for Blue, R for Red, and so forth.
+When entering guesses you only need to enter the first character of the color as a capital letter.
+
+You have 12 tries to guess the answer or you lose the game.
+
+Generating secret code ....
+
+You have 12 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+
+BGOY
+
+.... Secret Code
+BGOY Result: Black White
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+
+You have 11 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+
+BYGG
+
+.... Secret Code
+BGOY Result: Black White
+BYGG Result: White Black
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+
+You have 10 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+
+BGYO
+
+.... Secret Code
+BGOY Result: Black White
+BYGG Result: White Black
+BGYO Result: Black Black
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+
+You have 9 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+
+BGBB
+
+.... Secret Code
+BGOY Result: Black White
+BYGG Result: White Black
+BGYO Result: Black Black
+BGBB Result: Black Black
+....
+....
+....
+....
+....
+....
+....
+....
+....
+....
+
+You have 8 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+
+BGRR
+
+.... Secret Code
+BGOY Result: Black White
+BYGG Result: White Black
+BGYO Result: Black Black
+BGBB Result: Black Black
+BGRR Result: Black White
+....
+....
+....
+....
+....
+....
+....
+....
+....
+
+You have 7 guesses left
+
+
+What is your next guess?
+Type in the characters for your guess and press enter.
+Enter guess:
+
+

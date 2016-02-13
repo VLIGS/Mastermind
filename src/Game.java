@@ -4,4 +4,5 @@ public interface Game {
      * quits.
      */
     void runGames();
+    void setShowCode(Boolean code);
 }

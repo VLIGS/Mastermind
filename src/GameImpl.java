@@ -8,7 +8,7 @@ public class GameImpl implements Game {
     private Analyser analyser;
     private PegColour pegColours;
     private NumberOfPegs numberOfPegs;
-    private final NumberOfGuesses numberOfGuesses;
+    private NumberOfGuesses numberOfGuesses;
     private List<Line> guesses;
     private List<Line> feedback;
     private Scrambler scrambler;
@@ -16,9 +16,7 @@ public class GameImpl implements Game {
     private boolean showCode;
     private String playAgain;
 
-
-    public GameImpl(boolean easy){
-        this.showCode = easy;
+    public GameImpl(){
         guesses = new ArrayList<>();
         feedback = new ArrayList<>();
 
@@ -39,6 +37,7 @@ public class GameImpl implements Game {
         //errorChecker = new ErrorCheckerImpl();//Spring: need getInstance here
         errorChecker = Factory.getErrorChecker();
     }
+
     private void clearForNextGame(){
         guesses = new ArrayList<>();
         feedback = new ArrayList<>();
@@ -50,16 +49,10 @@ public class GameImpl implements Game {
         analyser = Factory.getAnalyser();
     }
 
-    /**
-    private static GameImpl instance = null;  //static constructor block
-    private GameImpl(boolean easy){
-        super(easy);
+    @Override
+    public void setShowCode(Boolean code){
+        this.showCode = code;
     }
-    public static GameImpl getInstance(boolean easy) {
-        instance = new GameImpl(easy);
-        return instance;
-    }
-     **/
 
     @Override
     public void runGames(){

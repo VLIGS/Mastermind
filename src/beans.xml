@@ -12,13 +12,13 @@
     <context:annotation-config />
 
     <bean id="errorChecker" class="ErrorCheckerImpl"/>
-    <bean id="pegcolour" class="PegColourImpl">
+    <bean id="pegcolour" class="PegColourImpl" scope="prototype" >
         <property name="colours" value="blue green orange purple red yellow"/>
     </bean>
-    <!--<bean id="game" class="GameImpl(easy)"/>-->
-    <bean id="analyser" class="AnalyserImpl"/>
-    <bean id="pegline" class="LineImpl"/>
-    <bean id="peg" class="PegImpl"/>
+    <!--<bean id="game" class="GameImpl"/>-->
+   <bean id="analyser" class="AnalyserImpl"/>
+    <!--<bean id="pegline" class="LineImpl"/>-->
+    <!--<bean id="peg" class="PegImpl"/><!-->
     <bean id="display" class="DisplayImpl"/>
     <bean id="codegenerator" class="CodeGeneratorImpl"/>
     <bean id="errorchecker" class="ErrorCheckerImpl"/>
@@ -30,12 +30,13 @@
     <bean id="numberofpegs" class="NumberOfPegs">
        <property name="numberOfPegs" value="4"/>
     </bean>
-    <!--
-    <bean id="feedback" class="Feedback">
-        <property name="exactMatch" value="Black"/>
-        <property name="symbolMatch" value="White"/>
-        <property name="noMatch" value="No pegs"/>
-    </bean>
-    -->
+     <!--
+   <bean id="feedback" class="Feedback">
+       <property name="exactMatch" value="Black"/>
+       <property name="symbolMatch" value="White"/>
+       <property name="noMatch" value="No pegs"/>
+   </bean>
+   -->
+
 
 </beans>

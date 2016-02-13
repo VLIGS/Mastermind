@@ -8,13 +8,13 @@ public class AnalyserImpl implements Analyser{
         boolean[] codeUsed = new boolean[code.numberOfPegs()];
         boolean[] guessUsed = new boolean[guess.numberOfPegs()];
 
-        Line unscrambledResult = new LineImpl(); //Spring
+        Line unscrambledResult = Factory.getLine();
 
         // Compare correct color and position
         for (int i = 0; i < code.numberOfPegs(); i++) {
             if (code.getPeg(i).getPegColour().equals(guess.getPeg(i).getPegColour())) {
                 exactMatch++;
-                unscrambledResult.addPeg(new PegImpl(Feedback.getExactMatch()));
+                unscrambledResult.addPeg(Factory.getPeg(Feedback.getExactMatch()));
                 codeUsed[i] = guessUsed[i] = true;
             }
         }
@@ -24,26 +24,25 @@ public class AnalyserImpl implements Analyser{
             for (int j = 0; j < guess.numberOfPegs(); j++) {
                 if (!codeUsed[i] && !guessUsed[j] && code.getPeg(i).getPegColour().equals(guess.getPeg(j).getPegColour())) {
                     colourMatch++;
-                    unscrambledResult.addPeg(new PegImpl(Feedback.getSymbolMatch()));
+                    unscrambledResult.addPeg(Factory.getPeg(Feedback.getSymbolMatch()));
                     codeUsed[i] = guessUsed[j] = true;
                     break;
                 }
             }
         }
 
-
         if(exactMatch == 0 && colourMatch == 0){
-            unscrambledResult.addPeg(new PegImpl(Feedback.getNoMatch()));
+            unscrambledResult.addPeg(Factory.getPeg(Feedback.getNoMatch()));
         }
         return unscrambledResult;
     }
 
     @Override
     public boolean checkIfWon(Line line, int length){
-        Line winningFeedback = new LineImpl(); //Spring
+        Line winningFeedback = Factory.getLine();
 
         for(int i = 0; i<length; i++){
-            winningFeedback.addPeg(new PegImpl(Feedback.getExactMatch())); //Spring
+            winningFeedback.addPeg(Factory.getPeg(Feedback.getExactMatch()));
         }
 
         if(line.toString().equals(winningFeedback.toString())){

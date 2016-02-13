@@ -16,6 +16,7 @@ public class GameImpl implements Game {
     private boolean showCode;
     private String playAgain;
 
+
     public GameImpl(boolean easy){
         this.showCode = easy;
         guesses = new ArrayList<>();

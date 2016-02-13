@@ -1,6 +1,8 @@
 import java.util.List;
 
 public interface Line {
+
+    void  addPeg(Peg ... pegs);
     /**
      *
      * @param p
@@ -31,6 +33,7 @@ public interface Line {
      * @param s
      */
     void setPeg(int n, String s);
+    void setLine(List<Peg> line);
 
     /**
      *

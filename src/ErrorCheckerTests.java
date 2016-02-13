@@ -11,12 +11,9 @@ public class ErrorCheckerTests {
 
     @Before
     public final void setUp() {
-        //pegColours = new PegColourImpl("blue", "green", "orange", "purple", "red", "yellow"); //Spring
         pegColours = Factory.getPegColours();
         //pegColoursOther = new PegColourImpl("apricot", "cobalt", "denim", "ecru", "flax", "indigo"); //Spring
-        //codeLength = new NumberOfPegs(4);
         codeLength = Factory.getNumberOfPegs();
-        //errorChecker = new ErrorCheckerImpl();
         errorChecker = Factory.getErrorChecker();
     }
 

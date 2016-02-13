@@ -10,20 +10,20 @@ public class AnalyserTests {
 
     @Before
     public final void setUp() {
-        //analyser = new AnalyserImpl();
         analyser = Factory.getAnalyser();
-        code = new LineImpl(new PegImpl("R"),new PegImpl("B"), new PegImpl("Y"), new PegImpl("G"));
+        code = Factory.getLine();
+        code.addPeg(Factory.getPeg("R"), Factory.getPeg("B"),Factory.getPeg("Y"),Factory.getPeg("G"));
     }
 
     @Test
     public void test_analyseGuess_with_AllMatchingPegsAllMatchingPosition() {
-        guess = new LineImpl();
-        Line expected = new LineImpl();
+        guess = Factory.getLine();
+        Line expected = Factory.getLine();
         for (int i = 0; i<code.numberOfPegs(); i++){
-            guess.addPeg(new PegImpl(code.getPeg(i).getPegColour()));
+            guess.addPeg(Factory.getPeg(code.getPeg(i).getPegColour()));
         }
         for (int i = 0; i<code.numberOfPegs(); i++){
-            expected.addPeg(new PegImpl(Feedback.getExactMatch()));
+            expected.addPeg(Factory.getPeg(Feedback.getExactMatch()));
         }
         Line actual = analyser.analyseGuess(guess, code);
         assertEquals(expected.toString(), actual.toString());
@@ -31,14 +31,14 @@ public class AnalyserTests {
 
     @Test
     public void test_analyseGuess_with_AllMatchingPegsNotMatchingPosition () {
-        Line expected = new LineImpl();
-        guess = new LineImpl();
+        guess = Factory.getLine();
+        Line expected = Factory.getLine();
 
         for (int i = code.numberOfPegs()-1; i>=0; i--){
-            guess.addPeg(new PegImpl(code.getPeg(i).getPegColour()));
+            guess.addPeg(Factory.getPeg(code.getPeg(i).getPegColour()));
         }
         for (int i = 0; i<code.numberOfPegs(); i++){
-            expected.addPeg(new PegImpl(Feedback.getSymbolMatch()));
+            expected.addPeg(Factory.getPeg(Feedback.getSymbolMatch()));
         }
         Line actual = analyser.analyseGuess(guess,code);
         assertEquals(expected.toString(),actual.toString());
@@ -46,36 +46,38 @@ public class AnalyserTests {
 
     @Test
     public void test_analyseGuess_with_NoMatchingPegs () {
-        guess = new LineImpl(new PegImpl("P"),new PegImpl("P"), new PegImpl("P"), new PegImpl("P"));
-        Line expected = new LineImpl(new PegImpl(Feedback.getNoMatch()));
+        guess = Factory.getLine();
+        guess.addPeg(Factory.getPeg("P"),Factory.getPeg("P"), Factory.getPeg("P"), Factory.getPeg("P"));
+        Line expected = Factory.getLine();
+        expected.addPeg(Factory.getPeg(Feedback.getNoMatch()));
         Line actual = analyser.analyseGuess(guess,code);
         assertEquals(expected.toString(),actual.toString());
     }
 
     @Test
     public void test_IfWon_with_NoMatchingPegs () {
-        guess = new LineImpl(new PegImpl("P"),new PegImpl("P"), new PegImpl("P"), new PegImpl("P"));
+        guess = Factory.getLine();
+        guess.addPeg(Factory.getPeg("P"),Factory.getPeg("P"), Factory.getPeg("P"), Factory.getPeg("P"));
         assertEquals(false, analyser.checkIfWon(analyser.analyseGuess(guess,code),code.numberOfPegs()));
     }
 
     @Test
     public void test_IfWon_with_AllMatchingPegsAllMatchingPosition () {
-        guess = new LineImpl();
+        guess = Factory.getLine();
         for (int i = 0; i<code.numberOfPegs(); i++){
-            guess.addPeg(new PegImpl(code.getPeg(i).getPegColour()));
+            guess.addPeg(Factory.getPeg(code.getPeg(i).getPegColour()));
         }
         assertEquals(true, analyser.checkIfWon(analyser.analyseGuess(guess,code),code.numberOfPegs()));
     }
 
     @Test
     public void test_IfWon_with_OnlyOneMatchingPegOneMatchingPosition () {
-        Peg notMatchingPeg = new PegImpl("O");
-        guess = new LineImpl();
+        Peg notMatchingPeg = Factory.getPeg("O");
+        guess = Factory.getLine();
         for (int i = 0; i<code.numberOfPegs(); i++){
             guess.addPeg(notMatchingPeg);
         }
         guess.setPeg(0,code.getPeg(0).getPegColour());
         assertEquals(false, analyser.checkIfWon(analyser.analyseGuess(guess,code),code.numberOfPegs()));
     }
-
 }

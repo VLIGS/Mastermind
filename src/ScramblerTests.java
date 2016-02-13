@@ -20,7 +20,8 @@ public class ScramblerTests {
      **/
     @Test
     public void testScrambledAllSamePegs() {
-        Line input = new LineImpl(new PegImpl(Feedback.getSymbolMatch()),new PegImpl(Feedback.getSymbolMatch()), new PegImpl(Feedback.getSymbolMatch()), new PegImpl(Feedback.getSymbolMatch()));
+        Line input = Factory.getLine();
+        input.addPeg(Factory.getPeg(Feedback.getSymbolMatch()),Factory.getPeg(Feedback.getSymbolMatch()), Factory.getPeg(Feedback.getSymbolMatch()), Factory.getPeg(Feedback.getSymbolMatch()));
         Line output = scrambler.scramble(input);
         assertEquals(input.toString(),output.toString());
     }

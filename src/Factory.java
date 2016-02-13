@@ -4,8 +4,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 //@Service
 public class Factory {
     private static BeanFactory factory = getBeanFactory();
+    //private static Peg peg = (Peg)factory.getBean("peg");
 
     public static Game getInstance(Boolean b) {
+        //return  (Game)factory.getBean("game");
         return new GameImpl(b);
     }
    // @Autowired
@@ -16,6 +18,16 @@ public class Factory {
         PegColour p = (PegColour)factory.getBean("pegcolour");
         p.setPegColours();
         return p;
+    }
+    public static Line getLine() {
+        return new LineImpl();
+        //return (Line)factory.getBean("pegline");
+    }
+    public static Peg getPeg(String colour) {
+        //Peg peg = (Peg)factory.getBean("peg");
+        Peg peg = new PegImpl();
+        peg.setPeg(colour);
+        return peg;
     }
     public static Display getDisplay() {
         return (Display)factory.getBean("display");

@@ -12,17 +12,15 @@ public class Factory {
     }
 
     public static Feedback getFeedback(){
-        return new Feedback();
-        //return (Feedback)factory.getBean("feedback");
+        //return new Feedback();
+        return (Feedback)factory.getBean("feedback");
     }
 
     public static Analyser getAnalyser() {
         return (Analyser)factory.getBean("analyser");
     }
     public static PegColour getPegColours(){
-        PegColour p = (PegColour)factory.getBean("pegcolour");
-        p.setPegColours();
-        return p;
+        return (PegColour)factory.getBean("pegcolour");
     }
     public static Line getLine() {
         return (Line)factory.getBean("pegline");

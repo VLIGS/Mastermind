@@ -56,7 +56,7 @@ public class GameImpl implements Game {
             int remainingNumberOfGuesses = numberOfGuesses.getNumberOfGuesses();
             do {
                 String guess = "";
-                while (!errorChecker.isValidGuess(guess,pegColours.getAllColours(),numberOfPegs.getNumberOfPegs())) {
+                while (!errorChecker.isValidGuess(guess,pegColours.getColours(),numberOfPegs.getNumberOfPegs())) {
                     guess = display.getGuess(remainingNumberOfGuesses);
                 }
                 guesses.add(Line.stringToLine(guess));

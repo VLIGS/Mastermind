@@ -7,13 +7,12 @@ public class AnalyserTests {
     private Analyser analyser;
     private Line guess;
     private Line code;
-    private Feedback feedback;
+
 
     @Before
     public final void setUp() {
         analyser = Factory.getAnalyser();
         code = Factory.getLine();
-        feedback = Factory.getFeedback();
         code.addPeg(Factory.getPeg("R"), Factory.getPeg("B"),Factory.getPeg("Y"),Factory.getPeg("G"));
     }
 
@@ -25,7 +24,7 @@ public class AnalyserTests {
             guess.addPeg(Factory.getPeg(code.getPeg(i).getPegColour()));
         }
         for (int i = 0; i<code.numberOfPegs(); i++){
-            expected.addPeg(Factory.getPeg(feedback.getExactMatch()));
+            expected.addPeg(Factory.getPeg(Feedback.getExactMatch()));
         }
         Line actual = analyser.analyseGuess(guess, code);
         assertEquals(expected.toString(), actual.toString());
@@ -40,7 +39,7 @@ public class AnalyserTests {
             guess.addPeg(Factory.getPeg(code.getPeg(i).getPegColour()));
         }
         for (int i = 0; i<code.numberOfPegs(); i++){
-            expected.addPeg(Factory.getPeg(feedback.getSymbolMatch()));
+            expected.addPeg(Factory.getPeg(Feedback.getSymbolMatch()));
         }
         Line actual = analyser.analyseGuess(guess,code);
         assertEquals(expected.toString(),actual.toString());
@@ -51,7 +50,7 @@ public class AnalyserTests {
         guess = Factory.getLine();
         guess.addPeg(Factory.getPeg("P"),Factory.getPeg("P"), Factory.getPeg("P"), Factory.getPeg("P"));
         Line expected = Factory.getLine();
-        expected.addPeg(Factory.getPeg(feedback.getNoMatch()));
+        expected.addPeg(Factory.getPeg(Feedback.getNoMatch()));
         Line actual = analyser.analyseGuess(guess,code);
         assertEquals(expected.toString(),actual.toString());
     }

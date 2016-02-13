@@ -1,0 +1,10 @@
+
+SPRING FRAMEWORK CONFIGURATIONS:
+
+* Set scope="prototype" (Spring container creates new bean instance of the object every time a request for bean is made)
+for Peg, Line and PegColour because these are state-full beans, rest of them are stateless and therefore let scope
+default to singleton.
+
+
+
+

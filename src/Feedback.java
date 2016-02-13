@@ -1,5 +1,6 @@
 
 public class Feedback {
+    /**
     private  String exactMatch = "Black";
     private  String symbolMatch  = "White";
     private  String noMatch = "No pegs";
@@ -12,7 +13,8 @@ public class Feedback {
 
     public  String getNoMatch(){return noMatch;}
     public  void setNoMatch(String s){noMatch = s;}
-    /**
+     **/
+
     private static String exactMatch = "Black";
     private static String symbolMatch  = "White";
     private static String noMatch = "No pegs";
@@ -25,5 +27,5 @@ public class Feedback {
 
     public static String getNoMatch(){return noMatch;}
     public static void setNoMatch(String s){noMatch = s;}
-**/
+
 }

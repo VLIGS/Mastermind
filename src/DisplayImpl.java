@@ -17,7 +17,7 @@ public class DisplayImpl implements Display{
                 "The computer will think of a secret code.\n" +
                 "The code consists of " + numberOfPegs + " colored pegs.\n" +
                 "The pegs may be one of " + pegColour.getLength() + " colors: " +
-                pegColour.getAllColours().toString() + " \n" +
+                pegColour.getColours().toString() + " \n" +
                 "A color may appear more than once in the code.\n" +
                 "\n" +
                 "You try to guess what colored pegs are in the code and what order they are in\n" +

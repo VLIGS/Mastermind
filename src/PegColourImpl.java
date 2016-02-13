@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PegColourImpl implements PegColour {
-    String colours;
+    private String colours;
     List<String> myColours = new ArrayList<String>();
 
     /**

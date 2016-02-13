@@ -17,35 +17,25 @@ public class GameImpl implements Game {
     private String playAgain;
 
     public GameImpl(){
+    }
+    private void prepareForGame(){
         guesses = new ArrayList<>();
         feedback = new ArrayList<>();
 
-        //pegColours = new PegColourImpl("blue", "green", "orange", "purple", "red", "yellow"); //Spring: need getInstance here
         pegColours = Factory.getPegColours();
-        //numberOfPegs = new NumberOfPegs(4); //Spring: need getInstance here
         numberOfPegs = Factory.getNumberOfPegs();
-        //numberOfGuesses = new NumberOfGuesses(12; //Spring: need getInstance here
         numberOfGuesses = Factory.getNumberOfGuesses();
-        //display = new DisplayImpl(); //Spring
         display = Factory.getDisplay();
-        //codeGenerator = new CodeGeneratorImpl(); //Spring: need getInstance here
         codeGenerator = Factory.getCodeGenerator();
-        //analyser = new AnalyserImpl(); //Spring: need getInstance here
         analyser = Factory.getAnalyser();
-        //scrambler = new ScramblerImpl(); //Spring: need getInstance here
         scrambler = Factory.getScrambler();
-        //errorChecker = new ErrorCheckerImpl();//Spring: need getInstance here
         errorChecker = Factory.getErrorChecker();
     }
-
     private void clearForNextGame(){
         guesses = new ArrayList<>();
         feedback = new ArrayList<>();
-        //display = new DisplayImpl(); //Spring
         display = Factory.getDisplay();
-        //codeGenerator = new CodeGeneratorImpl(); //Spring: need getInstance here
         codeGenerator = Factory.getCodeGenerator();
-        //analyser = new AnalyserImpl(); //Spring: need getInstance here
         analyser = Factory.getAnalyser();
     }
 
@@ -56,7 +46,7 @@ public class GameImpl implements Game {
 
     @Override
     public void runGames(){
-
+        prepareForGame();
         do {
             clearForNextGame();
             display.displayInstructions(pegColours,numberOfPegs.getNumberOfPegs(),numberOfGuesses.getNumberOfGuesses());

@@ -1,5 +1,6 @@
 //@Service
 public class AnalyserImpl implements Analyser{
+    private Feedback feedback = Factory.getFeedback();
 
     @Override
     public Line  analyseGuess(Line guess, Line code){
@@ -14,7 +15,7 @@ public class AnalyserImpl implements Analyser{
         for (int i = 0; i < code.numberOfPegs(); i++) {
             if (code.getPeg(i).getPegColour().equals(guess.getPeg(i).getPegColour())) {
                 exactMatch++;
-                unscrambledResult.addPeg(Factory.getPeg(Feedback.getExactMatch()));
+                unscrambledResult.addPeg(Factory.getPeg(feedback.getExactMatch()));
                 codeUsed[i] = guessUsed[i] = true;
             }
         }
@@ -24,7 +25,7 @@ public class AnalyserImpl implements Analyser{
             for (int j = 0; j < guess.numberOfPegs(); j++) {
                 if (!codeUsed[i] && !guessUsed[j] && code.getPeg(i).getPegColour().equals(guess.getPeg(j).getPegColour())) {
                     colourMatch++;
-                    unscrambledResult.addPeg(Factory.getPeg(Feedback.getSymbolMatch()));
+                    unscrambledResult.addPeg(Factory.getPeg(feedback.getSymbolMatch()));
                     codeUsed[i] = guessUsed[j] = true;
                     break;
                 }
@@ -32,7 +33,7 @@ public class AnalyserImpl implements Analyser{
         }
 
         if(exactMatch == 0 && colourMatch == 0){
-            unscrambledResult.addPeg(Factory.getPeg(Feedback.getNoMatch()));
+            unscrambledResult.addPeg(Factory.getPeg(feedback.getNoMatch()));
         }
         return unscrambledResult;
     }
@@ -42,7 +43,7 @@ public class AnalyserImpl implements Analyser{
         Line winningFeedback = Factory.getLine();
 
         for(int i = 0; i<length; i++){
-            winningFeedback.addPeg(Factory.getPeg(Feedback.getExactMatch()));
+            winningFeedback.addPeg(Factory.getPeg(feedback.getExactMatch()));
         }
 
         if(line.toString().equals(winningFeedback.toString())){

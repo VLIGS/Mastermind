@@ -3,20 +3,19 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Factory {
     private static BeanFactory factory = getBeanFactory();
-    //private static Feedback feedback;
 
     public static Game getInstance(Boolean b) {
-        //Game g = (Game)factory.getBean("game");
-        Game g = new GameImpl();
+        Game g = (Game)factory.getBean("game");
         g.setShowCode(b);
         return g;
 
     }
-    /**
-    public static void getFeedback(){
-        feedback = (Feedback)factory.getBean("feedback");
+
+    public static Feedback getFeedback(){
+        return new Feedback();
+        //return (Feedback)factory.getBean("feedback");
     }
-     **/
+
     public static Analyser getAnalyser() {
         return (Analyser)factory.getBean("analyser");
     }
@@ -26,12 +25,10 @@ public class Factory {
         return p;
     }
     public static Line getLine() {
-        return new LineImpl();
-        //return (Line)factory.getBean("pegline");
+        return (Line)factory.getBean("pegline");
     }
     public static Peg getPeg(String colour) {
-        //Peg pegToReturn = peg.
-        Peg peg = new PegImpl();
+        Peg peg = (Peg)factory.getBean("peg");
         peg.setPeg(colour);
         return peg;
     }

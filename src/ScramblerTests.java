@@ -5,9 +5,11 @@ import static org.junit.Assert.*;
 
 public class ScramblerTests {
     Scrambler scrambler;
+    private Feedback feedback;
     @Before
     public final void setUp() {
-        scrambler = new ScramblerImpl();//Spring
+        scrambler = Factory.getScrambler();
+        feedback = Factory.getFeedback();
     }
 
     /**
@@ -21,7 +23,7 @@ public class ScramblerTests {
     @Test
     public void testScrambledAllSamePegs() {
         Line input = Factory.getLine();
-        input.addPeg(Factory.getPeg(Feedback.getSymbolMatch()),Factory.getPeg(Feedback.getSymbolMatch()), Factory.getPeg(Feedback.getSymbolMatch()), Factory.getPeg(Feedback.getSymbolMatch()));
+        input.addPeg(Factory.getPeg(feedback.getSymbolMatch()),Factory.getPeg(feedback.getSymbolMatch()), Factory.getPeg(feedback.getSymbolMatch()), Factory.getPeg(feedback.getSymbolMatch()));
         Line output = scrambler.scramble(input);
         assertEquals(input.toString(),output.toString());
     }

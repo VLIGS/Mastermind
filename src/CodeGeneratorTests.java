@@ -17,7 +17,7 @@ public class CodeGeneratorTests {
     public final void setUp() {
         pegColours = Factory.getPegColours();
         codeLength = Factory.getNumberOfPegs();
-        codeGenerator = new CodeGeneratorImpl();
+        codeGenerator = Factory.getCodeGenerator();
     }
 
     @Test

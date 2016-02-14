@@ -1,5 +1,5 @@
 Code Generator(cg)
-    cg1: getCode(PegColour, int) vs getCode(int) //better decoupling if pass in PegColour as parameter
+    cg1: different implementation of
 
 
 Peg(pe)

@@ -8,7 +8,6 @@ public class GameImpl implements Game {
     private Display display;
     @Autowired
     private CodeGenerator codeGenerator;
-    private Line code;
     @Autowired
     private Analyser analyser;
     @Autowired
@@ -21,25 +20,14 @@ public class GameImpl implements Game {
     private Scrambler scrambler;
     @Autowired
     private ErrorChecker errorChecker;
+
     private boolean showCode;
-    private String playAgain;
     private List<Line> guesses;
     private List<Line> feedback;
 
-    public GameImpl(){
-    }
     private void prepareForGame(){
         guesses = new ArrayList<>();
         feedback = new ArrayList<>();
-
-        //pegColours = Factory.getPegColours();
-        //numberOfPegs = Factory.getNumberOfPegs();
-        //numberOfGuesses = Factory.getNumberOfGuesses();
-        //display = Factory.getDisplay();
-        //codeGenerator = Factory.getCodeGenerator();
-        //analyser = Factory.getAnalyser();
-        //scrambler = Factory.getScrambler();
-        //errorChecker = Factory.getErrorChecker();
     }
 
     @Override
@@ -49,12 +37,13 @@ public class GameImpl implements Game {
 
     @Override
     public void runGames(){
-        prepareForGame();
+        String playAgain;
+
         do {
-            //clearForNextGame();
+            prepareForGame();
             display.displayStartingInstructions();
             display.displayInstructions("Generating secret code ....");
-            code = codeGenerator.getCode();
+            Line code =  codeGenerator.getCode();
             display.displayInstructions("The secret code is " + code.toString(), showCode);
             int remainingNumberOfGuesses = numberOfGuesses.getNumberOfGuesses();
             do {

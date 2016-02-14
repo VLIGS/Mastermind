@@ -1,23 +1,9 @@
 
 public class Feedback {
-    /**
-    private  String exactMatch = "Black";
-    private  String symbolMatch  = "White";
-    private  String noMatch = "No pegs";
 
-    public  String getExactMatch(){return exactMatch;}
-    public  void setExactMatch(String s){exactMatch = s;}
-
-    public  String getSymbolMatch(){return symbolMatch;}
-    public  void setSymbolMatch(String s){symbolMatch = s;}
-
-    public  String getNoMatch(){return noMatch;}
-    public  void setNoMatch(String s){noMatch = s;}
-     **/
-
-    private static String exactMatch; //= "Black";
-    private static String symbolMatch;  //= "White";
-    private static String noMatch; //= "No pegs";
+    private static String exactMatch;
+    private static String symbolMatch;
+    private static String noMatch;
 
     public Feedback(String exactMatch, String symbolMatch, String noMatch){
         this.exactMatch = exactMatch;

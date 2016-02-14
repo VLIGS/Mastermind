@@ -4,34 +4,33 @@ public class AnalyserImpl implements Analyser{
     public Line  analyseGuess(Line guess, Line code){
 
         int exactMatch = 0;
-        int colourMatch = 0;
-        boolean[] codeUsed = new boolean[code.numberOfPegs()];
-        boolean[] guessUsed = new boolean[guess.numberOfPegs()];
-
+        int Match = 0;
+        boolean[] codeFlags = new boolean[code.numberOfPegs()];
+        boolean[] guessFlags = new boolean[guess.numberOfPegs()];
         Line unscrambledResult = Factory.getLine();
 
-        // Compare correct color and position
         for (int i = 0; i < code.numberOfPegs(); i++) {
             if (code.getPeg(i).getPegColour().equals(guess.getPeg(i).getPegColour())) {
-                exactMatch++;
                 unscrambledResult.addPeg(Factory.getPeg(Feedback.getExactMatch()));
-                codeUsed[i] = guessUsed[i] = true;
+                exactMatch++;
+                codeFlags[i] = true;
+                guessFlags[i] = true;
             }
         }
 
-        // Compare matching colors for "pins" that were not used
         for (int i = 0; i < code.numberOfPegs(); i++) {
             for (int j = 0; j < guess.numberOfPegs(); j++) {
-                if (!codeUsed[i] && !guessUsed[j] && code.getPeg(i).getPegColour().equals(guess.getPeg(j).getPegColour())) {
-                    colourMatch++;
+                if (!codeFlags[i] && !guessFlags[j] && code.getPeg(i).getPegColour().equals(guess.getPeg(j).getPegColour())) {
                     unscrambledResult.addPeg(Factory.getPeg(Feedback.getSymbolMatch()));
-                    codeUsed[i] = guessUsed[j] = true;
+                    Match++;
+                    codeFlags[i] = true;
+                    guessFlags[i] = true;
                     break;
                 }
             }
         }
 
-        if(exactMatch == 0 && colourMatch == 0){
+        if(exactMatch == 0 && Match == 0){
             unscrambledResult.addPeg(Factory.getPeg(Feedback.getNoMatch()));
         }
         return unscrambledResult;

@@ -1,3 +1,4 @@
+* Rework analyseGuess
 * Should use Set for colours rather than List because Set does not allow duplicates, but then need to reimplement CodeGenerator
 * Display uses System.out.println to communicate with user, but may need to use different mode of communication
 * Provide different implementations for one of the classes, such as random generator, to demonstrate flexibility, could

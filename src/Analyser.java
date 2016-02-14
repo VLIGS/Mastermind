@@ -6,15 +6,6 @@ public interface Analyser {
     Line analyseGuess(Line guess, Line code);
 
     /**
-    /**
-     *
-     * @return
-     *
-
-    Line getScrambledPegResult();
-    **/
-
-    /**
      *
      * @return
      */

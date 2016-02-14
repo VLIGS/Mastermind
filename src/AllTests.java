@@ -3,10 +3,10 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
 
-// specify a runner class: Suite.class
+//runner class:
 @RunWith(Suite.class)
 
-// specify an array of test classes
+//all test classes
 @Suite.SuiteClasses({
         AnalyserTests.class,
         CodeGeneratorTests.class,
@@ -14,6 +14,5 @@ import org.junit.runners.Suite;
         ScramblerTests.class}
 )
 
-// the actual class is empty
 public class AllTests {
 }

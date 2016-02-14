@@ -30,6 +30,7 @@ public class Factory {
         return (Line)factory.getBean("pegline");
     }
     public static Peg getPeg(String colour) {
+        //return (Peg)factory.getBean("peg");
         Peg peg = (Peg)factory.getBean("peg");
         peg.setPeg(colour);
         return peg;

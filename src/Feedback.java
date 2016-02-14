@@ -15,9 +15,16 @@ public class Feedback {
     public  void setNoMatch(String s){noMatch = s;}
      **/
 
-    private static String exactMatch = "Black";
-    private static String symbolMatch  = "White";
-    private static String noMatch = "No pegs";
+    private static String exactMatch; //= "Black";
+    private static String symbolMatch;  //= "White";
+    private static String noMatch; //= "No pegs";
+
+    public Feedback(String exactMatch, String symbolMatch, String noMatch){
+        this.exactMatch = exactMatch;
+        this.symbolMatch = symbolMatch;
+        this.noMatch = noMatch;
+
+    }
 
     public static String getExactMatch(){return exactMatch;}
     public static void setExactMatch(String s){exactMatch = s;}

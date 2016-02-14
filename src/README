@@ -5,6 +5,34 @@ SPRING FRAMEWORK CONFIGURATIONS:
 for Peg, Line and PegColour because these are state-full beans, rest of them are stateless and therefore let scope
 default to singleton.
 
+* Used autowiring for majority of classes that have constructors with no parameters, GameImpl instantiates most of the dependencies
+via autowiring, but for classes that have interactive or dynamic constructors, used dependency injection via setter method.
+
+* Factory class has setter methods for all classes configured via Spring, this is to facilitate all Test classes
+
+* Feedback class (used to generate feedback to player) has static fields and is instantiated via constructor
+
+FLEXIBILITY
+
+* As specified in requirements, following aspects of the Mastermind game can be configured via bean xml:
+        - number of pegs (configured in "numberofpegs" bean by changing value of "numberOfPeg" property)
+        - peg colours (configured in "pegcolour" bean by changing values of "colours" property implemented as list
+        - number of tries (configured in "numberofguesses" bean by changing value of "numberOfGuesses" property)
+
+* The feedback that is displayed to player can be configured in bean xml. For example three mutually exclusive
+ outcomes: ExactMatch, Match and NoMatch currently configured to be indicated by "Black", "White", and "No Pegs" respectively
+ can be configured to "ExactMatch", "Match", "NoMatch" if preferred. This can be achieved by changing values of constructor-arg
+ of "feedback" bean.
+
+* All of the implementations of beans can be reconfigured in bean file.
+
+
+FUNCTIONAL PROGRAMMING
+
+* Utilised streams, combined with map, λ and collect where appropriate, for example in isValidGuess method
+of ErrorCheckerImpl class.
+
+
 
 
 

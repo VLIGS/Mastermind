@@ -41,12 +41,12 @@
 <bean id="numberofpegs" class="NumberOfPegs">
    <property name="numberOfPegs" value="4"/>
 </bean>
-<!--
+
 <bean id="feedback" class="Feedback">
-  <property name="exactMatch" value="Black"/>
-  <property name="symbolMatch" value="White"/>
-  <property name="noMatch" value="No pegs"/>
+  <constructor-arg value="Black"/>
+  <constructor-arg value="White"/>
+  <constructor-arg value="No pegs"/>
 </bean>
--->
+
 
 </beans>

@@ -1,21 +1,29 @@
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.List;
 import java.util.Scanner;
 
 public class DisplayImpl implements Display{
     private Scanner scan;
+    @Autowired
+    PegColour pegColour;
+    @Autowired
+    NumberOfGuesses numberOfGuesses;
+    @Autowired
+    NumberOfPegs numberOfPegs;
 
     public DisplayImpl(){
         scan = new Scanner(System.in); //Spring
     }
 
     @Override
-    public void displayInstructions(PegColour pegColour, int numberOfPegs, int numberOfGuesses){
+    public void displayStartingInstructions(){
 
         displayInstructions("\n" + "Welcome to Mastermind.\n" +
                 "\n" +
                 "This is a text version of the classic board game Mastermind.\n" +
                 "The computer will think of a secret code.\n" +
-                "The code consists of " + numberOfPegs + " colored pegs.\n" +
+                "The code consists of " + numberOfPegs.getNumberOfPegs() + " colored pegs.\n" +
                 "The pegs may be one of " + pegColour.getLength() + " colors: " +
                 pegColour.getColours().toString() + " \n" +
                 "A color may appear more than once in the code.\n" +
@@ -28,7 +36,7 @@ public class DisplayImpl implements Display{
                 "Only the first letter of the color is displayed. B for Blue, R for Red, and so forth.\n" +
                 "When entering guesses you only need to enter the first character of the color as a capital letter.\n" +
                 "\n" +
-                "You have " + numberOfGuesses + " tries to guess the answer or you lose the game.\n");
+                "You have " + numberOfGuesses.getNumberOfGuesses() + " tries to guess the answer or you lose the game.\n");
 
     }
 
@@ -56,11 +64,11 @@ public class DisplayImpl implements Display{
     }
 
     @Override
-    public void displayResults(List guesses, List results, int NumberOfGuessesAllowed){
+    public void displayResults(List guesses, List results){
         displayInstructions("\n" + ".... Secret Code");
             int j = guesses.size()-2;
             displayResultsLine(guesses, results);
-            for (int i = j; i < NumberOfGuessesAllowed; i++){
+            for (int i = j; i < numberOfGuesses.getNumberOfGuesses(); i++){
                 displayInstructions("....");
             }
     }

@@ -1,9 +1,16 @@
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class CodeGeneratorImpl implements CodeGenerator{
-    @Override
-    public Line getCode(PegColour pegColours, NumberOfPegs numberOfPegs){
+    @Autowired
+    private RandomGenerator generator;
+    @Autowired
+    PegColour pegColours;
+    @Autowired
+    NumberOfPegs numberOfPegs;
 
-        RandomGenerator generator = Factory.getRandomGenerator();
+    @Override
+    public Line getCode(){
+
         Line code = Factory.getLine();
         for(int i = 0; i<numberOfPegs.getNumberOfPegs(); i++){
             int c = generator.generateRandomNumber(pegColours.getLength());

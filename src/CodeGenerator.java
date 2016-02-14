@@ -1,4 +1,4 @@
 
 public interface CodeGenerator {
-    Line getCode(PegColour pegColours, NumberOfPegs numberOfPegs);
+    Line getCode();
 }

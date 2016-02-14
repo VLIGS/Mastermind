@@ -1,20 +1,30 @@
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class GameImpl implements Game {
+    @Autowired
     private Display display;
+    @Autowired
     private CodeGenerator codeGenerator;
     private Line code;
+    @Autowired
     private Analyser analyser;
+    @Autowired
     private PegColour pegColours;
+    @Autowired
     private NumberOfPegs numberOfPegs;
+    @Autowired
     private NumberOfGuesses numberOfGuesses;
-    private List<Line> guesses;
-    private List<Line> feedback;
+    @Autowired
     private Scrambler scrambler;
+    @Autowired
     private ErrorChecker errorChecker;
     private boolean showCode;
     private String playAgain;
+    private List<Line> guesses;
+    private List<Line> feedback;
 
     public GameImpl(){
     }
@@ -22,21 +32,14 @@ public class GameImpl implements Game {
         guesses = new ArrayList<>();
         feedback = new ArrayList<>();
 
-        pegColours = Factory.getPegColours();
-        numberOfPegs = Factory.getNumberOfPegs();
-        numberOfGuesses = Factory.getNumberOfGuesses();
-        display = Factory.getDisplay();
-        codeGenerator = Factory.getCodeGenerator();
-        analyser = Factory.getAnalyser();
-        scrambler = Factory.getScrambler();
-        errorChecker = Factory.getErrorChecker();
-    }
-    private void clearForNextGame(){
-        guesses = new ArrayList<>();
-        feedback = new ArrayList<>();
-        display = Factory.getDisplay();
-        codeGenerator = Factory.getCodeGenerator();
-        analyser = Factory.getAnalyser();
+        //pegColours = Factory.getPegColours();
+        //numberOfPegs = Factory.getNumberOfPegs();
+        //numberOfGuesses = Factory.getNumberOfGuesses();
+        //display = Factory.getDisplay();
+        //codeGenerator = Factory.getCodeGenerator();
+        //analyser = Factory.getAnalyser();
+        //scrambler = Factory.getScrambler();
+        //errorChecker = Factory.getErrorChecker();
     }
 
     @Override
@@ -48,15 +51,15 @@ public class GameImpl implements Game {
     public void runGames(){
         prepareForGame();
         do {
-            clearForNextGame();
-            display.displayInstructions(pegColours,numberOfPegs.getNumberOfPegs(),numberOfGuesses.getNumberOfGuesses());
+            //clearForNextGame();
+            display.displayStartingInstructions();
             display.displayInstructions("Generating secret code ....");
-            code = codeGenerator.getCode(pegColours, numberOfPegs);
+            code = codeGenerator.getCode();
             display.displayInstructions("The secret code is " + code.toString(), showCode);
             int remainingNumberOfGuesses = numberOfGuesses.getNumberOfGuesses();
             do {
                 String guess = "";
-                while (!errorChecker.isValidGuess(guess,pegColours.getColours(),numberOfPegs.getNumberOfPegs())) {
+                while (!errorChecker.isValidGuess(guess)) {
                     guess = display.getGuess(remainingNumberOfGuesses);
                 }
                 guesses.add(Line.stringToLine(guess));
@@ -68,7 +71,7 @@ public class GameImpl implements Game {
                     remainingNumberOfGuesses = 0;
                 }
                 else if(remainingNumberOfGuesses>1) {
-                    display.displayResults(guesses, feedback, numberOfGuesses.getNumberOfGuesses());
+                    display.displayResults(guesses, feedback);
                     remainingNumberOfGuesses--;
                 }
                 else{

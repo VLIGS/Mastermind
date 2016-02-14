@@ -24,27 +24,29 @@
         </list>
         </property>
     </bean>
-    <bean id="game" class="GameImpl" scope="prototype"/>
-   <bean id="analyser" class="AnalyserImpl"/>
-    <bean id="pegline" class="LineImpl" scope="prototype"/>
-    <bean id="peg" class="PegImpl" scope="prototype"/>
-    <bean id="display" class="DisplayImpl"/>
-    <bean id="codegenerator" class="CodeGeneratorImpl"/>
-    <bean id="errorchecker" class="ErrorCheckerImpl"/>
-    <bean id="randomgenerator" class="RandomGeneratorImpl"/>
-    <bean id="scrambler" class="ScramblerImpl"/>
-    <bean id="numberofguesses" class="NumberOfGuesses">
-       <property name="numberOfGuesses" value="12"/>
-    </bean>
-    <bean id="numberofpegs" class="NumberOfPegs">
-       <property name="numberOfPegs" value="4"/>
-    </bean>
-    <!--
-  <bean id="feedback" class="Feedback">
-      <property name="exactMatch" value="Black"/>
-      <property name="symbolMatch" value="White"/>
-      <property name="noMatch" value="No pegs"/>
-  </bean>
-  -->
+    <bean id="game" class="GameImpl" scope="prototype">
+    <!--<property name="pegColours" ref="pegcolour"/>-->
+</bean>
+<bean id="analyser" class="AnalyserImpl"/>
+<bean id="pegline" class="LineImpl" scope="prototype"/>
+<bean id="peg" class="PegImpl" scope="prototype"/>
+<bean id="display" class="DisplayImpl"/>
+<bean id="codegenerator" class="CodeGeneratorImpl"/>
+<bean id="errorchecker" class="ErrorCheckerImpl"/>
+<bean id="randomgenerator" class="RandomGeneratorImpl"/>
+<bean id="scrambler" class="ScramblerImpl"/>
+<bean id="numberofguesses" class="NumberOfGuesses">
+   <property name="numberOfGuesses" value="12"/>
+</bean>
+<bean id="numberofpegs" class="NumberOfPegs">
+   <property name="numberOfPegs" value="4"/>
+</bean>
+<!--
+<bean id="feedback" class="Feedback">
+  <property name="exactMatch" value="Black"/>
+  <property name="symbolMatch" value="White"/>
+  <property name="noMatch" value="No pegs"/>
+</bean>
+-->
 
 </beans>

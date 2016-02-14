@@ -16,7 +16,7 @@ public class CodeGeneratorTests {
 
     @Before
     public final void setUp() {
-        pegColours = Factory.getPegColours();
+        pegColours= Factory.getPegColours();
         pegColoursOther = Factory.getPegColours();
         List<String> colours = new ArrayList<>();
         colours.add("apricot");
@@ -33,14 +33,14 @@ public class CodeGeneratorTests {
     @Test
     public void testLength()
     {
-        assertEquals(codeGenerator.getCode(pegColours,codeLength).numberOfPegs(),4);
+        assertEquals(codeGenerator.getCode().numberOfPegs(),4);
 
     }
 
     @Test
     public void testLegitimateColours(){
         List<String> possibleCodeComponents = pegColours.getColours().stream().map(s->{return s.substring(0,1).toUpperCase();}).collect(Collectors.toList());
-        List<String> codeList = codeGenerator.getCode(pegColours,codeLength ).getLine().stream().map(peg->{return peg.getPegColour().substring(0,1).toUpperCase();}).collect(Collectors.toList());
+        List<String> codeList = codeGenerator.getCode().getLine().stream().map(peg->{return peg.getPegColour().substring(0,1).toUpperCase();}).collect(Collectors.toList());
 
         for(String s:codeList){
             assertTrue(possibleCodeComponents.contains(s));
@@ -50,7 +50,7 @@ public class CodeGeneratorTests {
     @Test
     public void testNotLegitimateColours(){
         List<String> possibleCodeComponents = pegColoursOther.getColours().stream().map(s->{return s.substring(0,1).toUpperCase();}).collect(Collectors.toList());
-        List<String> codeList = codeGenerator.getCode(pegColours,codeLength ).getLine().stream().map(peg->{return peg.getPegColour().substring(0,1).toUpperCase();}).collect(Collectors.toList());
+        List<String> codeList = codeGenerator.getCode().getLine().stream().map(peg->{return peg.getPegColour().substring(0,1).toUpperCase();}).collect(Collectors.toList());
 
         for(String s:codeList){
             assertTrue(!possibleCodeComponents.contains(s));

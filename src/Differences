@@ -1,28 +1,18 @@
-Code Generator(cg)
-    cg1: different implementation of
-
 
 Peg(pe)
     pe1: Inconsistent naming Peg (interface) & PegImpl (class implementing Peg interface) vs PegInterface & Peg (class implementing PegInteface)
 
 GameImpl(gi)
-
-    gi1: Create PegColour instance to pass in, connected to cg1
-    gi2: Instantiate codeGenerator in constructor rather than in runGames //need to think whether codeGenerator might change during the game
-    gi3: added clearForNextGame method to ensure clean start, related gi2
+    gi1: added prepareForGame method to ensure clean start
 
 Display(ds)
-    ds1: don't have setNumberOfGuessesAllowed, setShowCode, setCode
-    ds2: pass in PegColour pegColour, int NumberOfPegs, int NumberOfGuesses into displayInstructions
+    ds1: don't have setShowCode, setCode
     ds3: changed displayInstructions to remove hardcoding of initial number of tries and number of pegs
     ds4: overloaded displayInstructions to just pass in simple string
     ds5: don't have guessAgain, maybe introduce this improvement later
     ds6: overloaded displayInstructions to pass in simple string and boolean, to have flexibility whether want to display it or not
     ds7: displayResults moved display of secret code out, think they are two separate things
     ds8: Wrapped System.out.println in single function, so that it is easy to change in one place if want to use different output method
-
-ErrorChecker(ec)
-    er1: implemented isValidGuess by passing in all the necessary parameters for checking rather than relying on internal parameters
 
 Analyser(an)
     an1: shifted stringToLine to Line, just seems that it should sit there as it is nothing to do with analyser

@@ -11,8 +11,6 @@ public class GameImpl implements Game {
     @Autowired
     private Analyser analyser;
     @Autowired
-    private PegColour pegColours;
-    @Autowired
     private NumberOfPegs numberOfPegs;
     @Autowired
     private NumberOfGuesses numberOfGuesses;

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class LineImpl implements Line{
@@ -6,9 +7,7 @@ public class LineImpl implements Line{
 
     @Override
     public void  addPeg(Peg ... pegs){
-        for (Peg p: pegs){
-            line.add(p);
-        }
+        line = Arrays.asList(pegs);
     }
 
     @Override

@@ -37,11 +37,7 @@ public class LineImpl implements Line{
 
     @Override
     public String toString(){
-            StringBuilder sb = new StringBuilder();
-            for (Peg p : line) {
-                sb.append(p.getPegColour());
-            }
-            return sb.toString();
+        return line.stream().map(Peg::getPegColour).reduce("", (a, b) -> a + b);
     }
 
 }

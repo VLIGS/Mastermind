@@ -11,7 +11,8 @@ import org.junit.runners.Suite;
         AnalyserTests.class,
         CodeGeneratorTests.class,
         ErrorCheckerTests.class,
-        ScramblerTests.class}
+        ScramblerTests.class,
+        LineTests.class}
 )
 
 public class AllTests {

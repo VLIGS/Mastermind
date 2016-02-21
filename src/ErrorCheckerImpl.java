@@ -19,7 +19,7 @@ public class ErrorCheckerImpl implements ErrorChecker{
         if(!guess.equals(guess.toUpperCase())){
             return false;
         }
-        List<String> capitalLetterOfColours = pegColour.getColours().stream().map(s->{return s.substring(0,1).toUpperCase();}).collect(Collectors.toList());
+        List<String> capitalLetterOfColours = pegColour.getColours().stream().map(s->s.substring(0,1).toUpperCase()).collect(Collectors.toList());
         for(int i = 0; i < guess.length(); i++){
             if(!capitalLetterOfColours.contains(guess.substring(i, i+1))){
                 return false;

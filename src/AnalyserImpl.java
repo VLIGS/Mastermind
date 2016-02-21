@@ -24,7 +24,7 @@ public class AnalyserImpl implements Analyser{
                     unscrambledResult.addPeg(Factory.getPeg(Feedback.getSymbolMatch()));
                     Match++;
                     codeFlags[i] = true;
-                    guessFlags[i] = true;
+                    guessFlags[j] = true;
                     break;
                 }
             }

@@ -2,6 +2,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 public class DisplayImpl implements Display{
     private Scanner scan;
@@ -66,11 +67,12 @@ public class DisplayImpl implements Display{
     @Override
     public void displayResults(List guesses, List results){
         displayInstructions("\n" + ".... Secret Code");
-            int j = guesses.size()-2;
+            int j = guesses.size();
+            int numberGuesses = numberOfGuesses.getNumberOfGuesses();
             displayResultsLine(guesses, results);
-            for (int i = j; i < numberOfGuesses.getNumberOfGuesses(); i++){
-                displayInstructions("....");
-            }
+            IntStream.range(j,numberGuesses)
+                    .forEach(i->displayInstructions("...."));
+
     }
     private void displayResultsLine(List guesses, List results){
         int j;

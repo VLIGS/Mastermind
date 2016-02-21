@@ -10,6 +10,7 @@ public interface Analyser {
      * @return
      */
     boolean checkIfWon(Line line, int length);
+    //Line getLine();
 
 
 

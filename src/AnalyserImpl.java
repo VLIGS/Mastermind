@@ -1,3 +1,5 @@
+import java.util.stream.IntStream;
+
 public class AnalyserImpl implements Analyser{
 
     @Override
@@ -8,6 +10,9 @@ public class AnalyserImpl implements Analyser{
         boolean[] codeFlags = new boolean[code.numberOfPegs()];
         boolean[] guessFlags = new boolean[guess.numberOfPegs()];
         Line unscrambledResult = Factory.getLine();
+        //Line unscrambledResult = getLine();
+
+        //code.getLine().stream().flatMap(i->guess.getLine().stream().map(j-> new Peg[]{i,j})).forEach(p->{if p()});
 
         for (int i = 0; i < code.numberOfPegs(); i++) {
             if (code.getPeg(i).getPegColour().equals(guess.getPeg(i).getPegColour())) {
@@ -40,14 +45,9 @@ public class AnalyserImpl implements Analyser{
     public boolean checkIfWon(Line line, int length){
 
         Line winningFeedback = Factory.getLine();
+        IntStream.range(0, length).forEach(i->winningFeedback.addPeg(Factory.getPeg(Feedback.getExactMatch())));
+        return line.toString().equals(winningFeedback.toString());
 
-        for(int i = 0; i<length; i++){
-            winningFeedback.addPeg(Factory.getPeg(Feedback.getExactMatch()));
-        }
-
-        if(line.toString().equals(winningFeedback.toString())){
-            return true;
-        }
-        return false;
     }
+
 }

@@ -27,14 +27,16 @@
     <bean id="game" class="GameImpl" scope="prototype">
 </bean>
 <bean id="analyser" class="AnalyserImpl"/>
+    <!--lookup-method name = "getLine" bean = "pegline"-->
+<!--/bean-->
 <bean id="pegline" class="LineImpl" scope="prototype"/>
 <bean id="peg" class="PegImpl" scope="prototype"/>
 <bean id="display" class="DisplayImpl"/>
 <bean id="codegenerator" class="CodeGeneratorImpl"/>
 <bean id="errorchecker" class="ErrorCheckerImpl"/>
-    <!--<bean id="randomgenerator" class="RandomGeneratorImpl"/> -->
+    <bean id="randomgenerator" class="RandomGeneratorImpl"/>
         <!-- number generator used for code generation -->
-    <bean id="randomgenerator" class="NotSoRandomGenerator"/>
+    <!--<bean id="randomgenerator" class="NotSoRandomGenerator"/>-->
 <bean id="scrambler" class="ScramblerImpl"/>
 <bean id="numberofguesses" class="NumberOfGuesses">
    <property name="numberOfGuesses" value="12"/>

@@ -20,11 +20,16 @@ public class ErrorCheckerImpl implements ErrorChecker{
             return false;
         }
         List<String> capitalLetterOfColours = pegColour.getColours().stream().map(s->s.substring(0,1).toUpperCase()).collect(Collectors.toList());
+
+        return guess.chars().mapToObj(i->(char)i).allMatch(g->capitalLetterOfColours.contains(String.valueOf(g)));
+
+        /**
         for(int i = 0; i < guess.length(); i++){
             if(!capitalLetterOfColours.contains(guess.substring(i, i+1))){
                 return false;
             }
         }
-        return true;
+         **/
+        //return true;
     }
 }

@@ -1,5 +1,7 @@
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.stream.IntStream;
+
 public class CodeGeneratorImpl implements CodeGenerator{
     @Autowired
     private RandomGenerator generator;
@@ -11,10 +13,12 @@ public class CodeGeneratorImpl implements CodeGenerator{
     @Override
     public Line getCode(){
         Line code = Factory.getLine();
-        for(int i = 0; i<numberOfPegs.getNumberOfPegs(); i++){
-            int c = generator.generateRandomNumber(pegColours.getLength());
-            code.addPeg(Factory.getPeg(pegColours.getColour(c).substring(0,1).toUpperCase()));
-        }
+        int numberOfColours = pegColours.getLength();
+        int numberPegs = numberOfPegs.getNumberOfPegs();
+
+        IntStream.range(0,numberPegs )
+                .forEach(i->code.addPeg(Factory.getPeg(pegColours.getColour(generator.generateRandomNumber(numberOfColours)).substring(0,1).toUpperCase())));
         return code;
+
     }
 }

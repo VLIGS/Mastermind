@@ -41,10 +41,10 @@ public interface Line {
      * @return
      */
     static Line stringToLine(String s){
-        Line line = new LineImpl(); //Spring
+        Line line = Factory.getLine();
 
         for(int i = 0; i < s.length(); i ++){
-            line.addPeg(new PegImpl(s.substring(i,i+1))); //Spring
+            line.addPeg(Factory.getPeg(s.substring(i,i+1)));
         }
         return line;
     }

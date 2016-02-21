@@ -32,6 +32,22 @@ FUNCTIONAL PROGRAMMING
 * Utilised streams, combined with map, λ and collect where appropriate, for example in isValidGuess method
 of ErrorCheckerImpl class.
 
+ASSUMPTIONS
+
+* Have assumed that any changes made by a new programmer to the peg colours will be made intelligently; that is
+  there will be no colours with the same first letters like Purple and Pink and that actual colours will be used
+  as strings and not any string, like Post, Perfect etc. .
+  This assumption has been made relying in the following from the assignment brief:
+  "Part of the assignment grade will be determined by .....how easily different colours could be added, ASSUMING
+  they start with a different letter than other existing colours"
+
+TESTING
+
+* Two different implementations of RandomGenerator: RandomGeneratorImpl and NotSoRandomGenerator have been added to the
+  project to demonstrate (i) the ease of interchanging implementing classes in the bean file. NotSoRandomGenerator was
+  used to test this but RandomGeneratorImpl should be used and has been used in the final config file to achieve the
+  correct results.
+
 
 
 

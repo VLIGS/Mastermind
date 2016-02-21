@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.stream.IntStream;
 
 public interface Line {
 
@@ -43,9 +44,8 @@ public interface Line {
     static Line stringToLine(String s){
         Line line = Factory.getLine();
 
-        for(int i = 0; i < s.length(); i ++){
-            line.addPeg(Factory.getPeg(s.substring(i,i+1)));
-        }
+        IntStream.range(0,s.length() )
+                .forEach(i->line.addPeg(Factory.getPeg(s.substring(i,i+1))));
         return line;
     }
 }

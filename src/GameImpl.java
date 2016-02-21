@@ -44,16 +44,17 @@ public class GameImpl implements Game {
             Line code =  codeGenerator.getCode();
             display.displayInstructions("The secret code is " + code.toString(), showCode);
             int remainingNumberOfGuesses = numberOfGuesses.getNumberOfGuesses();
+            int permittedNumberOfGuesses = numberOfGuesses.getNumberOfGuesses();
             do {
                 String guess = "";
                 while (!errorChecker.isValidGuess(guess)) {
                     guess = display.getGuess(remainingNumberOfGuesses);
                 }
                 guesses.add(Line.stringToLine(guess));
-                feedback.add(scrambler.scramble(analyser.analyseGuess(guesses.get(numberOfGuesses.getNumberOfGuesses()-remainingNumberOfGuesses),code)));
+                feedback.add(scrambler.scramble(analyser.analyseGuess(guesses.get(permittedNumberOfGuesses-remainingNumberOfGuesses),code)));
                 display.displayInstructions("The secret code is " + code.toString(), showCode);
 
-                if(analyser.checkIfWon(feedback.get(numberOfGuesses.getNumberOfGuesses()-remainingNumberOfGuesses),numberOfPegs.getNumberOfPegs())){
+                if(analyser.checkIfWon(feedback.get(permittedNumberOfGuesses-remainingNumberOfGuesses),numberOfPegs.getNumberOfPegs())){
                     display.displayWin(guesses, feedback);
                     remainingNumberOfGuesses = 0;
                 }

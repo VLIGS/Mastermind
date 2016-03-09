@@ -1,5 +1,9 @@
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,17 +11,22 @@ import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {"classpath:/beans.xml"})
 public class CodeGeneratorTests {
+    @Autowired
     PegColour pegColours;
+    @Autowired
     PegColour pegColoursOther;
+    @Autowired
     NumberOfPegs codeLength;
+    @Autowired
     CodeGenerator codeGenerator;
 
     @Before
     public final void setUp() {
-        pegColours= Factory.getPegColours();
-        pegColoursOther = Factory.getPegColours();
+        //pegColours= Factory.getPegColours();
+        //pegColoursOther = Factory.getPegColours();
         List<String> colours = new ArrayList<>();
         colours.add("apricot");
         colours.add("cobalt");
@@ -26,8 +35,8 @@ public class CodeGeneratorTests {
         colours.add("flax");
         colours.add("indigo");
         pegColoursOther.setColours(colours);
-        codeLength = Factory.getNumberOfPegs();
-        codeGenerator = Factory.getCodeGenerator();
+        //codeLength = Factory.getNumberOfPegs();
+        //codeGenerator = Factory.getCodeGenerator();
     }
 
     @Test

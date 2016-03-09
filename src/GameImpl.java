@@ -23,6 +23,10 @@ public class GameImpl implements Game {
     private List<Line> guesses;
     private List<Line> feedback;
 
+    public GameImpl(Boolean showCode){
+        this.showCode = showCode;
+    }
+
     private void prepareForGame(){
         guesses = new ArrayList<>();
         feedback = new ArrayList<>();

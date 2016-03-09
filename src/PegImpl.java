@@ -1,7 +1,7 @@
 
 public class PegImpl implements Peg{
     private String colour;
-    public PegImpl(){}
+    //public PegImpl(){}
     public PegImpl(String colour){
         this.colour = colour;
     }

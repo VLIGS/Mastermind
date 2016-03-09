@@ -5,19 +5,21 @@ public class Factory {
     private static BeanFactory factory = getBeanFactory();
 
     public static Game getInstance(Boolean b) {
-        Game g = (Game)factory.getBean("game");
-        g.setShowCode(b);
-        return g;
+        //Game g = (Game)factory.getBean("game", b);
+        //Game g = (Game)factory.getBean(GameImpl.class);
+        //g.setShowCode(b);
+        return (Game)factory.getBean("game", b);
 
     }
 
     /**
     public static Feedback getFeedback(){
         //return new Feedback();
-        return (Feedback)factory.getBean("feedback");
+        return (Feedback)factory.getBean("feedback"); ll
     }
      **/
 
+    /**
     public static Analyser getAnalyser() {
         return (Analyser)factory.getBean("analyser");
     }
@@ -25,16 +27,18 @@ public class Factory {
     public static PegColour getPegColours(){
         return (PegColour)factory.getBean("pegcolour");
     }
+     **/
 
     public static Line getLine() {
         return (Line)factory.getBean("pegline");
     }
     public static Peg getPeg(String colour) {
         //return (Peg)factory.getBean("peg");
-        Peg peg = (Peg)factory.getBean("peg");
-        peg.setPeg(colour);
-        return peg;
+       // Peg peg = (Peg)factory.getBean("peg",colour);
+       // peg.setPeg(colour);
+        return (Peg)factory.getBean("peg",colour);
     }
+    /**
     public static Display getDisplay() {
         return (Display)factory.getBean("display");
     }
@@ -56,9 +60,11 @@ public class Factory {
     public static NumberOfPegs getNumberOfPegs() {
         return (NumberOfPegs) factory.getBean("numberofpegs");
     }
+     */
+
     private static BeanFactory getBeanFactory() {
         // create a bean factory from beans.xml file
-        BeanFactory factory = new ClassPathXmlApplicationContext("beans.xml");
-        return factory;
+        //BeanFactory factory = new ClassPathXmlApplicationContext("beans.xml");
+        return new ClassPathXmlApplicationContext("beans.xml");
     }
 }

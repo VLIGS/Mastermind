@@ -1,3 +1,7 @@
+HOW TO RUN
+
+* Run via MastermindDriver
+
 
 SPRING FRAMEWORK CONFIGURATIONS:
 
@@ -5,10 +9,12 @@ SPRING FRAMEWORK CONFIGURATIONS:
 for Peg, Line and PegColour because these are state-full beans, rest of them are stateless and therefore let scope
 default to singleton.
 
+* Bean.xml file is used for configuration rather than JavaConfig despite consensus that xml is inferior method. In context of this
+coursework all the disadvantages of using xml file for configuration are not applicable. For instance, xml configuration method
+is often criticised for having long and unmanagable configuration, which is not the case for this case due to small scale.
+
 * Used autowiring for majority of classes that have constructors with no parameters, GameImpl instantiates most of the dependencies
 via autowiring, but for classes that have interactive or dynamic constructors, used dependency injection via setter method.
-
-* Factory class has setter methods for all classes configured via Spring, this is to facilitate all Test classes
 
 * Feedback class (used to generate feedback to player) has static fields and is instantiated via constructor
 

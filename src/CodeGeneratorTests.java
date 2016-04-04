@@ -25,8 +25,6 @@ public class CodeGeneratorTests {
 
     @Before
     public final void setUp() {
-        //pegColours= Factory.getPegColours();
-        //pegColoursOther = Factory.getPegColours();
         List<String> colours = new ArrayList<>();
         colours.add("apricot");
         colours.add("cobalt");
@@ -35,8 +33,6 @@ public class CodeGeneratorTests {
         colours.add("flax");
         colours.add("indigo");
         pegColoursOther.setColours(colours);
-        //codeLength = Factory.getNumberOfPegs();
-        //codeGenerator = Factory.getCodeGenerator();
     }
 
     @Test

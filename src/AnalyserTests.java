@@ -17,7 +17,6 @@ public class AnalyserTests {
 
     @Before
     public final void setUp() {
-        //analyser = Factory.getAnalyser();
         code = Factory.getLine();
         code.addPeg(Factory.getPeg("R"), Factory.getPeg("B"),Factory.getPeg("Y"),Factory.getPeg("G"));
 

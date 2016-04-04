@@ -14,7 +14,6 @@ public class ErrorCheckerTests {
 
     @Before
     public final void setUp() {
-        //errorChecker = Factory.getErrorChecker();
     }
 
     @Test

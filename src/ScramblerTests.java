@@ -16,7 +16,6 @@ public class ScramblerTests {
     Scrambler scrambler;
     @Before
     public final void setUp() {
-        //scrambler = Factory.getScrambler();
     }
 
 

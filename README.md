@@ -1,4 +1,8 @@
 # cw-two
+
+Aedemar McFarlane – GitHub account:  BBK-PiJ-2014-38 
+Liudmila Veshneva - GitHub account: VLIGS
+
 A program to play a text based version of the board game Mastermind
 
 HOW TO RUN
